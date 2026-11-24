@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AL-GHAZALI ARABIC VOCABULARY LEARNING | عُلَمَاءُ الْإِسْلَامِ</title>
+
+  <!-- Google Fonts: Amiri, Noto Naskh Arabic & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Poppins"', 'sans-serif'],
+            arabic: ['"Amiri"', '"Noto Naskh Arabic"', 'serif'],
+          },
+          colors: {
+            emeraldIslami: {
+              950: '#022C22',
+              900: '#064E3B',
+              800: '#065F46',
+              700: '#047857',
+              600: '#059669',
+              500: '#10B981',
+              100: '#D1FAE5',
+              50: '#ECFDF5',
+            },
+            goldIslami: {
+              700: '#B45309',
+              600: '#D97706',
+              500: '#F59E0B',
+              400: '#FBBF24',
+              200: '#FDE68A',
+              100: '#FEF3C7',
+              50: '#FFFBEB',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F8FAFC;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23047857' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M30 0l8.7 21.3L60 30l-21.3 8.7L30 60l-8.7-21.3L0 30l21.3-8.7z'/%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      color: #0F172A;
+    }
+
+    .arabic-text {
+      font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+      direction: rtl;
+      line-height: 1.9;
+    }
+
+    .islamic-banner-pattern {
+      background-color: #064E3B;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(16, 185, 129, 0.22) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FBBF24' stroke-opacity='0.11' stroke-width='1.2'%3E%3Cpolygon points='40,4 50,26 74,26 55,41 62,64 40,50 18,64 25,41 6,26 30,26'/%3E%3Crect x='22' y='22' width='36' height='36' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Page Transition Animation */
+    .page-fade {
+      animation: fadeSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 3D Flashcard Flip */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    /* Certificate Ornamental Frame */
+    .certificate-frame {
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 100%);
+      border: 8px double #D97706;
+      box-shadow: inset 0 0 0 3px #065F46, 0 20px 35px -10px rgba(6, 78, 59, 0.25);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #ECFDF5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #059669;
+      border-radius: 9999px;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #certificate-printable, #certificate-printable * {
+        visibility: visible;
+      }
+      #certificate-printable {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-amber-200 selection:text-emerald-950">
+
+  <!-- Toast Notification -->
+  <div id="toast-box" class="fixed bottom-5 right-5 z-50 hidden transform transition-all duration-300 translate-y-4 opacity-0 max-w-sm">
+    <div class="bg-emerald-950 text-white px-5 py-3.5 rounded-2xl shadow-2xl border-2 border-amber-400 flex items-center gap-3">
+      <i id="toast-icon" class="fa-solid fa-volume-high text-amber-400 text-lg"></i>
+      <p id="toast-message" class="text-xs sm:text-sm font-medium leading-snug"></p>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- TOP NAVIGATION HEADER                                                 -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-2 border-amber-400/70 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+        
+        <!-- Brand Identity -->
+        <div onclick="navigateTo('home')" class="flex items-center gap-3 cursor-pointer group">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl islamic-banner-pattern border-2 border-amber-400 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform flex-shrink-0">
+            <!-- Islamic Star & Book SVG -->
+            <svg class="w-7 h-7 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2L14.8 7.5L21 8.5L16.5 13L17.5 19.5L12 16.5L6.5 19.5L7.5 13L3 8.5L9.2 7.5L12 2Z" fill="rgba(251,191,36,0.2)"/>
+              <path d="M8 10.5C9.5 9.8 11 10 12 10.8C13 10 14.5 9.8 16 10.5V15.5C14.5 14.8 13 15 12 15.8C11 15 9.5 14.8 8 15.5V10.5Z" fill="#FFFFFF" stroke="#064E3B" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
+                Bahasa Arab • Jenjang MTs
+              </span>
+              <span id="header-progress-pill" class="text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                0/28 Mufrodat
+              </span>
+            </div>
+            <h1 class="text-sm sm:text-base lg:text-lg font-extrabold text-emerald-950 tracking-tight leading-tight mt-0.5">
+              AL-GHAZALI ARABIC VOCABULARY LEARNING
+            </h1>
+          </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="grid grid-cols-4 gap-1.5 sm:gap-2" aria-label="Menu Utama">
+          <button onclick="navigateTo('home')" id="nav-home"
+            class="nav-btn px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 border bg-emerald-800 text-white border-emerald-900 shadow-xs">
+            <i class="fa-solid fa-house"></i>
+            <span>Beranda</span>
+          </button>
+
+          <button onclick="navigateTo('materi')" id="nav-materi"
+            class="nav-btn px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 border bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-50">
+            <i class="fa-solid fa-book-quran"></i>
+            <span>Materi</span>
+          </button>
+
+          <button onclick="navigateTo('latihan')" id="nav-latihan"
+            class="nav-btn px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 border bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-50">
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <span>Latihan</span>
+          </button>
+
+          <button onclick="navigateTo('kuis')" id="nav-kuis"
+            class="nav-btn px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 border bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-50">
+            <i class="fa-solid fa-award"></i>
+            <span>Kuis</span>
+          </button>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- MAIN CONTENT CONTAINER                                                -->
+  <!-- ===================================================================== -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+
+    <!-- =================================================================== -->
+    <!-- PAGE 1: HOME (BERANDA)                                              -->
+    <!-- =================================================================== -->
+    <section id="page-home" class="page-fade space-y-8">
+      
+      <!-- Hero Banner Utama -->
+      <div class="islamic-banner-pattern rounded-3xl p-6 sm:p-10 lg:p-12 text-white border-4 border-amber-400/80 shadow-2xl relative overflow-hidden">
+        <!-- Ornamen Sudut Geometris -->
+        <div class="absolute top-0 right-0 w-44 h-44 opacity-15 pointer-events-none">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#FBBF24" stroke-width="1.5">
+            <circle cx="100" cy="0" r="80"/>
+            <circle cx="100" cy="0" r="60"/>
+            <circle cx="100" cy="0" r="40"/>
+            <path d="M100 0 L20 0 M100 0 L100 80 M100 0 L35 65"/>
+          </svg>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          
+          <!-- Teks Sambutan (7 Kolom) -->
+          <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-300/60 text-amber-200 text-xs sm:text-sm font-semibold">
+              <i class="fa-solid fa-mosque text-amber-300"></i>
+              <span>Mata Pelajaran Bahasa Arab • Madrasah Tsanawiyah (MTs)</span>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="arabic-text text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-300 drop-shadow-sm text-center lg:text-right">
+                عُلَمَاءُ الْإِسْلَامِ
+              </h2>
+              <p class="arabic-text text-2xl sm:text-3xl font-bold text-white text-center lg:text-right">
+                تَعَلَّمِ الْمُفْرَدَاتِ الْعَرَبِيَّةَ مَعَ الْإِمَامِ الْغَزَالِيِّ
+              </p>
+            </div>
+
+            <div class="bg-emerald-950/60 backdrop-blur-xs border border-emerald-500/40 rounded-2xl p-4">
+              <p class="arabic-text text-lg sm:text-xl font-bold text-amber-200 text-center lg:text-right">
+                «تَعَلَّمِ الْمُفْرَدَاتِ، وَاكْتَشِفْ عَالَمَ الْعُلَمَاءِ»
+              </p>
+              <p class="text-xs sm:text-sm text-emerald-100 mt-1">
+                <strong>Belajar Kosakata, Mengenal Dunia Para Ilmuwan</strong> — Mari meneladani semangat keilmuan Hujjatul Islam Imam Abu Hamid Al-Ghazali sambil menguasai 28 mufrodat bahasa Arab secara interaktif, lengkap dengan pelafalan audio, flashcard, latihan bertahap, dan sertifikat kelulusan.
+              </p>
+            </div>
+
+            <!-- Tombol Navigasi Utama -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+              <button onclick="navigateTo('materi')"
+                class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-emerald-950 font-extrabold text-sm sm:text-base shadow-lg shadow-amber-950/30 border-2 border-amber-200 transition-all transform hover:-translate-y-0.5 flex items-center gap-2.5">
+                <i class="fa-solid fa-play"></i>
+                <span>MULAI BELAJAR</span>
+              </button>
+
+              <button onclick="navigateTo('materi')"
+                class="px-5 py-3.5 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-sm sm:text-base border-2 border-white/40 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-amber-300"></i>
+                <span>MATERI</span>
+              </button>
+
+              <button onclick="navigateTo('kuis')"
+                class="px-5 py-3.5 rounded-2xl bg-emerald-600/80 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base border-2 border-emerald-300/60 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-trophy text-amber-300"></i>
+                <span>KUIS</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Ilustrasi Historis Sopan Imam Al-Ghazali & Perpustakaan Klasik (5 Kolom) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-sm bg-gradient-to-b from-amber-100 via-amber-50 to-emerald-50 rounded-3xl p-4 border-4 border-amber-400 shadow-xl">
+              <svg viewBox="0 0 360 320" class="w-full h-auto rounded-2xl">
+                <!-- Latar Langit & Kubah Klasik -->
+                <rect width="360" height="320" rx="16" fill="#FEF3C7"/>
+                <!-- Lengkungan Arsitektur Islam (Mihrab / Perpustakaan) -->
+                <path d="M35,300 L35,120 Q35,35 180,22 Q325,35 325,120 L325,300 Z" fill="#065F46" stroke="#D97706" stroke-width="4"/>
+                <path d="M52,300 L52,126 Q52,52 180,40 Q308,52 308,126 L308,300 Z" fill="#ECFDF5"/>
+                
+                <!-- Rak Kitab Perpustakaan Klasik di Latar -->
+                <rect x="70" y="95" width="75" height="8" rx="2" fill="#B45309"/>
+                <rect x="76" y="72" width="10" height="23" rx="1" fill="#047857"/>
+                <rect x="88" y="68" width="12" height="27" rx="1" fill="#D97706"/>
+                <rect x="102" y="74" width="9" height="21" rx="1" fill="#064E3B"/>
+                <rect x="113" y="70" width="11" height="25" rx="1" fill="#F59E0B"/>
+
+                <rect x="215" y="95" width="75" height="8" rx="2" fill="#B45309"/>
+                <rect x="222" y="70" width="11" height="25" rx="1" fill="#064E3B"/>
+                <rect x="235" y="74" width="10" height="21" rx="1" fill="#D97706"/>
+                <rect x="247" y="68" width="12" height="27" rx="1" fill="#047857"/>
+                <rect x="261" y="73" width="10" height="22" rx="1" fill="#F59E0B"/>
+
+                <!-- Lentera Gantung Emas (Qindil) -->
+                <line x1="180" y1="40" x2="180" y2="75" stroke="#B45309" stroke-width="2.5"/>
+                <polygon points="180,75 168,92 172,110 188,110 192,92" fill="#FBBF24" stroke="#B45309" stroke-width="2"/>
+                <circle cx="180" cy="96" r="5" fill="#FFFBEB"/>
+
+                <!-- Ilustrasi Sopan Sosok Cendekiawan Muslim (Imam Al-Ghazali) -->
+                <!-- Jubah Ulama Hijau Emerald & Selendang Emas -->
+                <path d="M115,255 Q120,185 180,182 Q240,185 245,255 Z" fill="#047857" stroke="#022C22" stroke-width="2.5"/>
+                <!-- Aksen Sorban / Selendang Bahu -->
+                <path d="M148,186 Q180,210 212,186 L202,240 L158,240 Z" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+                <!-- Kepala & Sorban Ulama (Imamah) -->
+                <circle cx="180" cy="148" r="23" fill="#FDE68A" stroke="#92400E" stroke-width="2"/>
+                <!-- Janggut Rapi -->
+                <path d="M161,152 Q163,176 180,178 Q197,176 199,152 Q189,162 180,162 Q171,162 161,152 Z" fill="#334155"/>
+                <!-- Sorban / Imamah Klasik -->
+                <ellipse cx="180" cy="128" rx="28" ry="15" fill="#FFFFFF" stroke="#065F46" stroke-width="2.5"/>
+                <path d="M153,130 Q180,118 207,130" fill="none" stroke="#D97706" stroke-width="2.5"/>
+                <path d="M156,122 Q180,112 204,122" fill="none" stroke="#059669" stroke-width="2"/>
+
+                <!-- Meja Kayu Belajar (Rihal / Meja Kitab) -->
+                <rect x="85" y="242" width="190" height="14" rx="5" fill="#92400E" stroke="#451A03" stroke-width="2"/>
+                <rect x="102" y="256" width="16" height="44" fill="#78350F"/>
+                <rect x="242" y="256" width="16" height="44" fill="#78350F"/>
+
+                <!-- Kitab Terbuka (Ihya Ulumuddin) & Pena Bulu -->
+                <path d="M135,242 L145,222 Q162,218 180,226 Q198,218 215,222 L225,242 Z" fill="#FFFFFF" stroke="#D97706" stroke-width="2.5"/>
+                <line x1="180" y1="226" x2="180" y2="242" stroke="#D97706" stroke-width="2"/>
+                <!-- Tinta & Pena Bulu (Qalam) -->
+                <rect x="234" y="228" width="16" height="14" rx="3" fill="#064E3B" stroke="#FBBF24" stroke-width="1.5"/>
+                <path d="M242,228 Q254,204 268,194 Q256,214 244,228 Z" fill="#F59E0B" stroke="#78350F" stroke-width="1.5"/>
+              </svg>
+              <div class="text-center mt-2.5">
+                <p class="arabic-text text-lg font-bold text-emerald-900">الْإِمَامُ أَبُو حَامِدٍ الْغَزَالِيُّ (٤٥٠ - ٥٠٥ هـ)</p>
+                <p class="text-xs text-slate-600 font-medium">Ilustrasi Suasana Keilmuan di Perpustakaan Klasik</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Kartu Status Progres Belajar Siswa (LocalStorage) -->
+      <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-emerald-200 shadow-md">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl border border-emerald-300 flex-shrink-0">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div>
+              <h3 class="text-base sm:text-lg font-extrabold text-emerald-950">Progres Belajar Siswa</h3>
+              <p id="home-student-greeting" class="text-xs sm:text-sm text-slate-600">
+                Selamat datang, Penuntut Ilmu! Progres belajarmu tersimpan otomatis di perangkat ini.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 sm:gap-4">
+            <div class="bg-emerald-50 px-4 py-2.5 rounded-2xl border border-emerald-200 text-center">
+              <span class="block text-[11px] font-bold text-emerald-800 uppercase">Mufrodat</span>
+              <span id="home-vocab-count" class="text-lg sm:text-xl font-extrabold text-emerald-950">0 / 28</span>
+            </div>
+            <div class="bg-amber-50 px-4 py-2.5 rounded-2xl border border-amber-200 text-center">
+              <span class="block text-[11px] font-bold text-amber-800 uppercase">Skor Kuis</span>
+              <span id="home-quiz-score" class="text-lg sm:text-xl font-extrabold text-amber-700">-</span>
+            </div>
+            <div class="bg-slate-50 px-4 py-2.5 rounded-2xl border border-slate-200 text-center">
+              <span class="block text-[11px] font-bold text-slate-600 uppercase">Sertifikat</span>
+              <span id="home-cert-status" class="text-xs sm:text-sm font-extrabold text-slate-700 mt-1 block">Belum</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="mt-4">
+          <div class="flex justify-between text-xs font-bold text-slate-600 mb-1">
+            <span>Penguasaan Kosakata</span>
+            <span id="home-vocab-percent">0%</span>
+          </div>
+          <div class="w-full h-3 bg-emerald-100 rounded-full overflow-hidden border border-emerald-200">
+            <div id="home-vocab-bar" class="h-full bg-gradient-to-r from-emerald-600 to-amber-500 transition-all duration-500" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Fitur Utama -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div onclick="navigateTo('materi')" class="bg-white hover:bg-emerald-50/60 cursor-pointer rounded-3xl p-6 border-2 border-emerald-200 hover:border-emerald-500 shadow-sm transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-800 text-amber-300 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <h3 class="text-lg font-extrabold text-emerald-950">1. Biografi & 28 Mufrodat</h3>
+          <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+            Pelajari kisah hidup Imam Al-Ghazali beserta 28 kosakata pilihan dalam 4 kategori lengkap dengan audio, ilustrasi, contoh kalimat, dan Flashcard 3D.
+          </p>
+        </div>
+
+        <div onclick="navigateTo('latihan')" class="bg-white hover:bg-amber-50/60 cursor-pointer rounded-3xl p-6 border-2 border-amber-200 hover:border-amber-500 shadow-sm transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500 text-emerald-950 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <h3 class="text-lg font-extrabold text-emerald-950">2. 4 Mode Latihan Interaktif</h3>
+          <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+            Asah daya ingat melalui permainan mencocokkan kata, tebak arti cepat, melengkapi kalimat rumpang, dan menyusun kalimat bahasa Arab.
+          </p>
+        </div>
+
+        <div onclick="navigateTo('kuis')" class="bg-white hover:bg-emerald-50/60 cursor-pointer rounded-3xl p-6 border-2 border-emerald-200 hover:border-emerald-500 shadow-sm transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-700 text-white flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h3 class="text-lg font-extrabold text-emerald-950">3. Kuis 20 Soal & Sertifikat</h3>
+          <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+            Uji pemahaman akhir dengan 20 soal pilihan ganda bertingkat MTs, penilaian otomatis, predikat Arab, dan Sertifikat Penghargaan siap cetak.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =================================================================== -->
+    <!-- PAGE 2: MATERI (BIOGRAFI IMAM AL-GHAZALI & 28 MUFRODAT)             -->
+    <!-- =================================================================== -->
+    <section id="page-materi" class="hidden page-fade space-y-8">
+
+      <!-- BAGIAN 1: PENGENALAN IMAM AL-GHAZALI -->
+      <div class="bg-white rounded-3xl border-2 border-amber-400/80 shadow-lg overflow-hidden">
+        <div class="islamic-banner-pattern px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-300">الْقِسْمُ الْأَوَّلُ • Bagian Pertama</span>
+            <h2 class="text-xl sm:text-2xl font-extrabold text-white">Pengenalan Imam Al-Ghazali (تَعْرِيفُ الْإِمَامِ الْغَزَالِيِّ)</h2>
+          </div>
+
+          <!-- Tombol Audio Biografi (Putar & Berhenti) -->
+          <div class="flex items-center gap-2">
+            <button onclick="speakBioText()"
+              class="px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-extrabold text-xs sm:text-sm shadow-sm flex items-center gap-2 transition">
+              <i class="fa-solid fa-volume-high"></i>
+              <span>Putar Audio</span>
+            </button>
+            <button onclick="stopSpeech()"
+              class="px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm border border-white/30 flex items-center gap-1.5 transition">
+              <i class="fa-solid fa-stop"></i>
+              <span>Berhenti</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <!-- Teks Arab -->
+          <div class="lg:col-span-7 bg-emerald-50/80 rounded-2xl p-5 sm:p-6 border-2 border-emerald-200">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-extrabold text-emerald-800 bg-white px-3 py-1 rounded-full border border-emerald-200">
+                النَّصُّ الْعَرَبِيُّ • Teks Bahasa Arab
+              </span>
+              <i class="fa-solid fa-feather-pointed text-amber-600"></i>
+            </div>
+            <p id="bio-arabic-text" class="arabic-text text-2xl sm:text-3xl font-bold text-emerald-950 text-right leading-loose">
+              وُلِدَ الْإِمَامُ أَبُو حَامِدٍ الْغَزَالِيُّ فِي مَدِينَةِ طُوسَ سَنَةَ ٤٥٠ هِجْرِيَّةٍ. وَكَانَ عَالِمًا مُسْلِمًا مَشْهُورًا، وَاهْتَمَّ بِالْعِلْمِ وَالْفِقْهِ وَالْفَلْسَفَةِ وَالتَّصَوُّفِ. وَمِنْ أَشْهَرِ كُتُبِهِ إِحْيَاءُ عُلُومِ الدِّينِ. وَتُوُفِّيَ فِي مَدِينَةِ طُوسَ سَنَةَ ٥٠٥ هِجْرِيَّةٍ.
+            </p>
+          </div>
+
+          <!-- Terjemahan Indonesia -->
+          <div class="lg:col-span-5 bg-amber-50/70 rounded-2xl p-5 sm:p-6 border-2 border-amber-200 space-y-3">
+            <span class="inline-block text-xs font-extrabold text-amber-900 bg-white px-3 py-1 rounded-full border border-amber-300">
+              <i class="fa-solid fa-language mr-1 text-amber-600"></i> Terjemahan Bahasa Indonesia
+            </span>
+            <p class="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
+              "Imam Abu Hamid Al-Ghazali dilahirkan di kota <strong>Tus</strong> pada tahun <strong>450 Hijriah</strong>. Beliau adalah seorang ilmuwan Muslim yang terkenal, dan menaruh perhatian besar pada ilmu pengetahuan, fikih, filsafat, dan tasawuf. Di antara kitabnya yang paling masyhur adalah <strong>Ihya’ Ulumuddin</strong>. Beliau wafat di kota Tus pada tahun <strong>505 Hijriah</strong>."
+            </p>
+            <div class="pt-2 border-t border-amber-200 flex items-center gap-2 text-xs text-emerald-900 font-semibold">
+              <i class="fa-solid fa-lightbulb text-amber-600"></i>
+              <span>Gelar beliau: <strong>Hujjatul Islam (حُجَّةُ الْإِسْلَامِ)</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BAGIAN 2: MATERI 28 MUFRODAT & MODE FLASHCARD -->
+      <div class="space-y-5">
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-emerald-200 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">الْقِسْمُ الثَّانِي • 28 Kosakata Pilihan</span>
+            <h2 class="text-xl sm:text-2xl font-extrabold text-emerald-950">Materi Mufrodat (الْمُفْرَدَاتُ الْعَرَبِيَّةُ)</h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
+              Klik ikon audio untuk mendengar pelafalan, pelajari contoh kalimatnya, dan tandai mufrodat yang sudah kamu kuasai.
+            </p>
+          </div>
+
+          <!-- Switcher Tampilan Grid Kartu vs Flashcard Interaktif -->
+          <div class="flex items-center gap-2 bg-emerald-50 p-1.5 rounded-2xl border border-emerald-200 self-start lg:self-center">
+            <button onclick="setVocabViewMode('grid')" id="btn-mode-grid"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-emerald-800 text-white shadow-xs transition flex items-center gap-2">
+              <i class="fa-solid fa-grid-2"></i>
+              <span>Kartu Mufrodat</span>
+            </button>
+            <button onclick="setVocabViewMode('flashcard')" id="btn-mode-flashcard"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold text-emerald-900 hover:bg-white transition flex items-center gap-2">
+              <i class="fa-solid fa-clone text-amber-600"></i>
+              <span>Mode Flashcard</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Kategori -->
+        <div class="flex flex-wrap items-center gap-2" id="category-filter-bar">
+          <button onclick="filterVocabCategory('all')" data-cat="all"
+            class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-400 text-emerald-950 border-2 border-amber-500 shadow-xs transition">
+            Semua (28)
+          </button>
+          <button onclick="filterVocabCategory('A')" data-cat="A"
+            class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-emerald-900 border border-emerald-200 hover:bg-emerald-50 transition">
+            A. Tokoh & Profesi (6)
+          </button>
+          <button onclick="filterVocabCategory('B')" data-cat="B"
+            class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-emerald-900 border border-emerald-200 hover:bg-emerald-50 transition">
+            B. Pendidikan & Ilmu (9)
+          </button>
+          <button onclick="filterVocabCategory('C')" data-cat="C"
+            class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-emerald-900 border border-emerald-200 hover:bg-emerald-50 transition">
+            C. Kehidupan & Tempat (8)
+          </button>
+          <button onclick="filterVocabCategory('D')" data-cat="D"
+            class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-emerald-900 border border-emerald-200 hover:bg-emerald-50 transition">
+            D. Akhlak & Nilai Islam (5)
+          </button>
+        </div>
+
+        <!-- VIEW A: GRID KARTU MUFRODAT -->
+        <div id="vocab-grid-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          <!-- Dirender via JS -->
+        </div>
+
+        <!-- VIEW B: MODE FLASHCARD 3D INTERAKTIF -->
+        <div id="vocab-flashcard-container" class="hidden max-w-2xl mx-auto py-4 space-y-5">
+          <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-600 bg-white px-4 py-2.5 rounded-2xl border border-emerald-200">
+            <span id="flashcard-counter">Kartu 1 dari 28</span>
+            <span id="flashcard-cat-label" class="px-3 py-0.5 rounded-full bg-amber-100 text-amber-900">Kategori A</span>
+            <button onclick="shuffleFlashcards()" class="text-emerald-700 hover:text-emerald-900 flex items-center gap-1">
+              <i class="fa-solid fa-shuffle"></i> Acak Kartu
+            </button>
+          </div>
+
+          <!-- Kartu Flip 3D -->
+          <div onclick="flipFlashcard()" class="perspective-1000 cursor-pointer h-80 sm:h-96 select-none">
+            <div id="flashcard-inner" class="relative w-full h-full transform-style-3d">
+              
+              <!-- SISI DEPAN (ARAB) -->
+              <div class="absolute inset-0 backface-hidden islamic-banner-pattern rounded-3xl p-6 sm:p-8 border-4 border-amber-400 shadow-xl flex flex-col items-center justify-between text-white">
+                <div class="w-full flex items-center justify-between">
+                  <span class="px-3 py-1 rounded-full bg-white/15 text-amber-200 text-xs font-bold">
+                    Sisi Depan • الْكَلِمَةُ
+                  </span>
+                  <button onclick="event.stopPropagation(); speakFlashcardWord()"
+                    class="w-11 h-11 rounded-full bg-amber-400 hover:bg-amber-300 text-emerald-950 flex items-center justify-center shadow-md transition">
+                    <i class="fa-solid fa-volume-high text-lg"></i>
+                  </button>
+                </div>
+
+                <div class="text-center space-y-2">
+                  <div id="fc-front-icon" class="w-16 h-16 mx-auto rounded-2xl bg-white/15 border border-amber-300/50 flex items-center justify-center text-3xl text-amber-300">
+                    <i class="fa-solid fa-book"></i>
+                  </div>
+                  <p id="fc-arabic-word" class="arabic-text text-5xl sm:text-6xl font-bold text-amber-300">عَالِمٌ</p>
+                </div>
+
+                <p class="text-xs text-emerald-100 flex items-center gap-1.5">
+                  <i class="fa-solid fa-hand-pointer text-amber-300"></i> Klik kartu untuk membalik dan melihat arti
+                </p>
+              </div>
+
+              <!-- SISI BELAKANG (ARTI & CONTOH KALIMAT) -->
+              <div class="absolute inset-0 backface-hidden rotate-y-180 bg-white rounded-3xl p-6 sm:p-8 border-4 border-emerald-600 shadow-xl flex flex-col items-center justify-between text-center">
+                <div class="w-full flex items-center justify-between">
+                  <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold">
+                    Sisi Belakang • الْمَعْنَى وَالْمِثَالُ
+                  </span>
+                  <button onclick="event.stopPropagation(); speakFlashcardSentence()"
+                    class="px-3 py-1.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-volume-high"></i> Audio Kalimat
+                  </button>
+                </div>
+
+                <div class="space-y-3 w-full">
+                  <h3 id="fc-meaning" class="text-2xl sm:text-3xl font-extrabold text-emerald-900">Ilmuwan</h3>
+                  <div class="bg-emerald-50 rounded-2xl p-4 border border-emerald-200">
+                    <p id="fc-sentence-ar" class="arabic-text text-2xl font-bold text-emerald-950 text-center">
+                      الْإِمَامُ الْغَزَالِيُّ عَالِمٌ كَبِيرٌ.
+                    </p>
+                    <p id="fc-sentence-id" class="text-xs sm:text-sm text-slate-600 mt-1">
+                      "Imam Al-Ghazali adalah seorang ilmuwan besar."
+                    </p>
+                  </div>
+                </div>
+
+                <button onclick="event.stopPropagation(); toggleFlashcardLearned()" id="fc-learned-btn"
+                  class="px-5 py-2 rounded-xl bg-emerald-700 text-white text-xs sm:text-sm font-bold flex items-center gap-2">
+                  <i class="fa-solid fa-check"></i> Tandai Sudah Dipelajari
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Navigasi Kartu Sebelumnya / Selanjutnya -->
+          <div class="flex items-center justify-between gap-3">
+            <button onclick="prevFlashcard()"
+              class="flex-1 py-3 px-4 rounded-2xl bg-white hover:bg-emerald-50 text-emerald-950 font-bold text-sm border-2 border-emerald-300 shadow-xs transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-arrow-left"></i> Sebelumnya
+            </button>
+            <button onclick="flipFlashcard()"
+              class="py-3 px-5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-extrabold text-sm border-2 border-amber-500 shadow-xs transition">
+              <i class="fa-solid fa-rotate"></i> Balik
+            </button>
+            <button onclick="nextFlashcard()"
+              class="flex-1 py-3 px-4 rounded-2xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm border-2 border-emerald-900 shadow-xs transition flex items-center justify-center gap-2">
+              Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigasi Bawah ke Latihan & Kuis -->
+        <div class="bg-emerald-900 text-white rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-amber-400">
+          <div>
+            <h4 class="font-extrabold text-base sm:text-lg text-amber-300">Sudah Memahami Mufrodat di Atas?</h4>
+            <p class="text-xs sm:text-sm text-emerald-100">Lanjutkan ke halaman Latihan Interaktif atau langsung uji kemampuanmu di Kuis 20 Soal.</p>
+          </div>
+          <div class="flex items-center gap-3 w-full sm:w-auto">
+            <button onclick="navigateTo('latihan')" class="flex-1 sm:flex-none px-5 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-extrabold text-sm transition">
+              Ke Halaman Latihan <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =================================================================== -->
+    <!-- PAGE 3: LATIHAN INTERAKTIF (4 JENIS LATIHAN)                        -->
+    <!-- =================================================================== -->
+    <section id="page-latihan" class="hidden page-fade space-y-6">
+      
+      <div class="bg-white rounded-3xl p-6 border-2 border-emerald-200 shadow-sm">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-amber-700">التَّدْرِيبَاتُ التَّفَاعُلِيَّةُ • Penguatan Pemahaman</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-emerald-950 mt-1">Latihan Interaktif Bahasa Arab</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          Pilih salah satu dari 4 jenis latihan berikut. Setiap jawaban akan langsung mendapatkan umpan balik visual dan efek suara!
+        </p>
+
+        <!-- Sub-Navigasi 4 Jenis Latihan -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 mt-5">
+          <button onclick="switchPracticeMode(1)" id="prac-tab-1"
+            class="prac-tab p-3 rounded-2xl text-xs sm:text-sm font-bold border-2 bg-emerald-800 text-white border-emerald-900 transition text-left">
+            <span class="block text-[10px] text-amber-300 uppercase">Latihan 1</span>
+            <span>Mencocokkan Kata</span>
+          </button>
+          <button onclick="switchPracticeMode(2)" id="prac-tab-2"
+            class="prac-tab p-3 rounded-2xl text-xs sm:text-sm font-bold border-2 bg-white text-emerald-950 border-emerald-200 hover:bg-emerald-50 transition text-left">
+            <span class="block text-[10px] text-amber-600 uppercase">Latihan 2</span>
+            <span>Memilih Arti Benar</span>
+          </button>
+          <button onclick="switchPracticeMode(3)" id="prac-tab-3"
+            class="prac-tab p-3 rounded-2xl text-xs sm:text-sm font-bold border-2 bg-white text-emerald-950 border-emerald-200 hover:bg-emerald-50 transition text-left">
+            <span class="block text-[10px] text-amber-600 uppercase">Latihan 3</span>
+            <span>Melengkapi Kalimat</span>
+          </button>
+          <button onclick="switchPracticeMode(4)" id="prac-tab-4"
+            class="prac-tab p-3 rounded-2xl text-xs sm:text-sm font-bold border-2 bg-white text-emerald-950 border-emerald-200 hover:bg-emerald-50 transition text-left">
+            <span class="block text-[10px] text-amber-600 uppercase">Latihan 4</span>
+            <span>Menyusun Kalimat</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- LATIHAN 1: MENCOCOKKAN KOSAKATA -->
+      <div id="prac-panel-1" class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-200 shadow-md space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-extrabold text-emerald-950">1. Mencocokkan Kosakata Arab dengan Artinya</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Klik satu kata Arab di kolom kanan, lalu klik pasangan arti bahasa Indonesianya di kolom kiri.</p>
+          </div>
+          <button onclick="initMatchingGame()" class="px-4 py-2 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-xs flex items-center gap-1.5">
+            <i class="fa-solid fa-rotate-right"></i> Soal Baru
+          </button>
+        </div>
+
+        <div id="match-feedback" class="hidden p-3.5 rounded-2xl text-sm font-bold"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Kolom Arti Indonesia -->
+          <div class="space-y-2.5">
+            <p class="text-xs font-extrabold uppercase text-slate-500">Arti Bahasa Indonesia</p>
+            <div id="match-id-list" class="space-y-2.5"></div>
+          </div>
+          <!-- Kolom Kata Arab -->
+          <div class="space-y-2.5">
+            <p class="text-xs font-extrabold uppercase text-slate-500 text-right">الْمُفْرَدَاتُ الْعَرَبِيَّةُ</p>
+            <div id="match-ar-list" class="space-y-2.5"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LATIHAN 2: MEMILIH ARTI YANG BENAR -->
+      <div id="prac-panel-2" class="hidden bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-200 shadow-md space-y-5">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-extrabold text-emerald-950">2. Memilih Arti yang Benar dari Kosakata Arab</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Dengarkan pelafalannya dan pilih arti bahasa Indonesia yang paling tepat.</p>
+          </div>
+          <span id="prac2-score" class="px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-900 text-xs font-extrabold">Benar: 0</span>
+        </div>
+
+        <div class="bg-emerald-50 rounded-2xl p-6 border-2 border-emerald-200 text-center space-y-2">
+          <span class="text-xs font-bold text-emerald-700">Apa arti dari mufrodat berikut?</span>
+          <p id="prac2-word" class="arabic-text text-5xl font-bold text-emerald-950">حِكْمَةٌ</p>
+          <button onclick="speakArabic(currentPrac2Word.arabic, currentPrac2Word.arabic)"
+            class="px-4 py-1.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 text-xs font-extrabold inline-flex items-center gap-1.5">
+            <i class="fa-solid fa-volume-high"></i> Dengarkan
+          </button>
+        </div>
+
+        <div id="prac2-options" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+        <div id="prac2-feedback" class="hidden p-4 rounded-2xl text-sm font-bold"></div>
+      </div>
+
+      <!-- LATIHAN 3: MELENGKAPI KALIMAT BAHASA ARAB -->
+      <div id="prac-panel-3" class="hidden bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-200 shadow-md space-y-5">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-extrabold text-emerald-950">3. Melengkapi Kalimat Bahasa Arab</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Pilih kosakata yang tepat untuk mengisi bagian rumpang (.......) pada kalimat.</p>
+          </div>
+          <span id="prac3-counter" class="px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-900 text-xs font-extrabold">Soal 1 / 6</span>
+        </div>
+
+        <div class="bg-amber-50/80 rounded-2xl p-6 border-2 border-amber-200 text-center space-y-2">
+          <p id="prac3-sentence" class="arabic-text text-3xl sm:text-4xl font-bold text-emerald-950"></p>
+          <p id="prac3-hint" class="text-xs sm:text-sm text-slate-600 font-medium"></p>
+        </div>
+
+        <div id="prac3-options" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+        <div id="prac3-feedback" class="hidden p-4 rounded-2xl text-sm font-bold"></div>
+      </div>
+
+      <!-- LATIHAN 4: MENYUSUN KATA MENJADI KALIMAT SEDERHANA -->
+      <div id="prac-panel-4" class="hidden bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-200 shadow-md space-y-5">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-extrabold text-emerald-950">4. Menyusun Kata Menjadi Kalimat Sederhana</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Klik potongan kata Arab di bawah secara berurutan (dari kanan ke kiri) sesuai terjemahan yang diminta.</p>
+          </div>
+          <span id="prac4-counter" class="px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-900 text-xs font-extrabold">Kalimat 1 / 5</span>
+        </div>
+
+        <div class="bg-emerald-50 rounded-2xl p-4 border border-emerald-200">
+          <span class="text-xs font-bold text-emerald-800 block">Susunlah kalimat yang artinya:</span>
+          <p id="prac4-target-id" class="text-base sm:text-lg font-extrabold text-emerald-950 mt-0.5"></p>
+        </div>
+
+        <!-- Area Hasil Susunan Siswa (RTL) -->
+        <div class="min-h-[76px] p-4 rounded-2xl bg-slate-50 border-2 border-dashed border-amber-400 flex flex-wrap items-center justify-start gap-2.5" dir="rtl" id="prac4-answer-zone">
+          <span class="text-xs text-slate-400 font-sans" dir="ltr">Klik kata-kata di bawah untuk menyusun kalimat...</span>
+        </div>
+
+        <!-- Bank Kata Acak -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-1" dir="rtl" id="prac4-word-bank"></div>
+
+        <div id="prac4-feedback" class="hidden p-4 rounded-2xl text-sm font-bold"></div>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <button onclick="resetSentenceBuilder()" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs sm:text-sm transition">
+            <i class="fa-solid fa-rotate-left mr-1"></i> Ulangi Susunan
+          </button>
+          <button onclick="checkSentenceBuilder()" class="px-6 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm transition">
+            <i class="fa-solid fa-check mr-1"></i> Periksa Kalimat
+          </button>
+          <button id="prac4-next-btn" onclick="nextSentenceBuilder()" class="hidden px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-extrabold text-xs sm:text-sm transition">
+            Kalimat Berikutnya <i class="fa-solid fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =================================================================== -->
+    <!-- PAGE 4: KUIS EVALUASI (20 SOAL + IDENTITAS + SERTIFIKAT)            -->
+    <!-- =================================================================== -->
+    <section id="page-kuis" class="hidden page-fade space-y-6">
+
+      <!-- LANGKAH 1: FORM IDENTITAS SISWA -->
+      <div id="quiz-identity-card" class="max-w-xl mx-auto bg-white rounded-3xl border-2 border-amber-400 shadow-xl overflow-hidden">
+        <div class="islamic-banner-pattern p-6 text-white text-center">
+          <div class="w-14 h-14 rounded-2xl bg-amber-400 text-emerald-950 mx-auto flex items-center justify-center text-2xl mb-3 shadow-md">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-extrabold">Identitas Peserta Kuis</h2>
+          <p class="text-xs sm:text-sm text-emerald-100 mt-1">
+            Isi data dirimu terlebih dahulu sebelum mengerjakan 20 soal evaluasi Bahasa Arab. Data akan ditampilkan pada hasil akhir dan Sertifikat.
+          </p>
+        </div>
+
+        <form onsubmit="startOfficialQuiz(event)" class="p-6 sm:p-8 space-y-4">
+          <div>
+            <label for="student-name" class="block text-xs font-extrabold uppercase text-emerald-950 mb-1.5">Nama Lengkap Siswa *</label>
+            <input type="text" id="student-name" required placeholder="Contoh: Ahmad Zaki Al-Fatih"
+              class="w-full px-4 py-3 rounded-xl border-2 border-emerald-200 focus:border-emerald-700 focus:outline-none text-sm font-semibold">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="student-class" class="block text-xs font-extrabold uppercase text-emerald-950 mb-1.5">Kelas *</label>
+              <input type="text" id="student-class" required placeholder="Contoh: VIII-A / IX-B"
+                class="w-full px-4 py-3 rounded-xl border-2 border-emerald-200 focus:border-emerald-700 focus:outline-none text-sm font-semibold">
+            </div>
+            <div>
+              <label for="student-absen" class="block text-xs font-extrabold uppercase text-emerald-950 mb-1.5">Nomor Absen *</label>
+              <input type="number" id="student-absen" required min="1" max="60" placeholder="Contoh: 12"
+                class="w-full px-4 py-3 rounded-xl border-2 border-emerald-200 focus:border-emerald-700 focus:outline-none text-sm font-semibold">
+            </div>
+          </div>
+
+          <div class="bg-amber-50 p-3.5 rounded-2xl border border-amber-200 text-xs text-slate-700 space-y-1">
+            <p class="font-bold text-amber-900"><i class="fa-solid fa-circle-info mr-1"></i> Ketentuan Kuis:</p>
+            <p>• Jumlah soal: <strong>20 Soal Pilihan Ganda</strong> (4 pilihan jawaban).</p>
+            <p>• Jawaban benar: <strong>+5 Poin</strong> | Jawaban salah: <strong>0 Poin</strong> (Skor Maksimal: 100).</p>
+          </div>
+
+          <button type="submit"
+            class="w-full py-3.5 px-6 rounded-2xl bg-emerald-800 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base shadow-md border-2 border-emerald-950 transition flex items-center justify-center gap-2">
+            <span>MULAI MENGERJAKAN KUIS</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- LANGKAH 2: AREA PENGERJAAN 20 SOAL -->
+      <div id="quiz-exam-card" class="hidden max-w-3xl mx-auto bg-white rounded-3xl border-2 border-emerald-300 shadow-xl overflow-hidden">
+        <!-- Header Progres Kuis -->
+        <div class="bg-emerald-900 text-white p-5 sm:p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span id="exam-q-number" class="px-3.5 py-1 rounded-full bg-amber-400 text-emerald-950 text-xs font-extrabold">
+              Soal 1 dari 20
+            </span>
+            <div class="flex items-center gap-3 text-xs font-bold">
+              <span id="exam-student-tag" class="text-emerald-200">Siswa</span>
+              <span id="exam-live-score" class="px-3 py-1 rounded-full bg-white/15 text-amber-300">Skor: 0</span>
+            </div>
+          </div>
+
+          <!-- Progress Bar Soal -->
+          <div class="w-full h-2.5 bg-emerald-950 rounded-full overflow-hidden">
+            <div id="exam-progress-bar" class="h-full bg-amber-400 transition-all duration-300" style="width: 5%"></div>
+          </div>
+        </div>
+
+        <!-- Konten Soal -->
+        <div class="p-6 sm:p-8 space-y-6">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-xs font-bold text-emerald-700 uppercase">Pertanyaan</span>
+              <button id="exam-audio-btn" onclick="speakCurrentExamQuestion()"
+                class="px-3 py-1 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold flex items-center gap-1.5 transition">
+                <i class="fa-solid fa-volume-high"></i> Dengarkan Arab
+              </button>
+            </div>
+            <h3 id="exam-q-id" class="text-base sm:text-lg font-extrabold text-slate-900 leading-snug"></h3>
+            <p id="exam-q-ar" class="arabic-text text-2xl sm:text-3xl font-bold text-emerald-950 text-right bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200"></p>
+          </div>
+
+          <!-- 4 Pilihan Jawaban -->
+          <div id="exam-options" class="space-y-3"></div>
+
+          <!-- Umpan Balik Jawaban -->
+          <div id="exam-feedback-box" class="hidden p-4 rounded-2xl border-2 text-sm font-bold"></div>
+
+          <!-- Tombol Lanjut -->
+          <div class="flex justify-end pt-2">
+            <button id="exam-next-btn" onclick="nextExamQuestion()"
+              class="hidden px-6 py-3 rounded-2xl bg-emerald-800 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-md transition flex items-center gap-2">
+              <span id="exam-next-label">Soal Selanjutnya</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LANGKAH 3: HASIL KUIS & SERTIFIKAT KELULUSAN -->
+      <div id="quiz-result-container" class="hidden max-w-4xl mx-auto space-y-8">
+        
+        <!-- Kartu Rapor Hasil -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-300 shadow-xl text-center space-y-6">
+          <div class="w-16 h-16 rounded-2xl bg-amber-400 text-emerald-950 mx-auto flex items-center justify-center text-3xl shadow-md">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+
+          <div>
+            <span class="px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-extrabold uppercase">
+              Hasil Evaluasi Pembelajaran
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-emerald-950 mt-2" id="res-student-name">Nama Siswa</h2>
+            <p class="text-sm text-slate-600 font-semibold" id="res-student-meta">Kelas: - | No. Absen: -</p>
+          </div>
+
+          <!-- Statistik Nilai -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+            <div class="bg-emerald-50 p-4 rounded-2xl border border-emerald-200">
+              <span class="text-xs font-bold text-emerald-800 block">Jawaban Benar</span>
+              <span id="res-correct" class="text-2xl font-extrabold text-emerald-700">0</span>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-2xl border border-rose-200">
+              <span class="text-xs font-bold text-rose-800 block">Jawaban Salah</span>
+              <span id="res-wrong" class="text-2xl font-extrabold text-rose-600">0</span>
+            </div>
+            <div class="bg-amber-50 p-4 rounded-2xl border border-amber-300">
+              <span class="text-xs font-bold text-amber-800 block">Nilai Akhir</span>
+              <span id="res-score" class="text-3xl font-extrabold text-amber-600">0</span>
+            </div>
+            <div class="bg-emerald-900 text-white p-4 rounded-2xl border border-amber-400">
+              <span class="text-xs font-bold text-amber-300 block">Predikat</span>
+              <span id="res-predicate-ar" class="arabic-text text-xl font-bold block leading-tight mt-0.5">مُمْتَازٌ</span>
+              <span id="res-predicate-id" class="text-xs text-emerald-100 block">Istimewa</span>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi -->
+          <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <button onclick="window.print()"
+              class="px-5 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-extrabold text-sm shadow-sm flex items-center gap-2 transition">
+              <i class="fa-solid fa-print"></i> Cetak / Simpan Sertifikat
+            </button>
+            <button onclick="retakeQuiz()"
+              class="px-5 py-3 rounded-2xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm flex items-center gap-2 transition">
+              <i class="fa-solid fa-rotate-right"></i> Ulangi Kuis
+            </button>
+            <button onclick="navigateTo('materi')"
+              class="px-5 py-3 rounded-2xl bg-white hover:bg-emerald-50 text-emerald-950 font-bold text-sm border-2 border-emerald-300 flex items-center gap-2 transition">
+              <i class="fa-solid fa-book-open"></i> Kembali ke Materi
+            </button>
+          </div>
+        </div>
+
+        <!-- SERTIFIKAT KELULUSAN PEMBELAJARAN -->
+        <div id="certificate-printable" class="certificate-frame rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden">
+          <div class="space-y-3">
+            <div class="flex items-center justify-center gap-2 text-amber-600">
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-mosque text-2xl text-emerald-800"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+            </div>
+
+            <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-800">
+              AL-GHAZALI ARABIC VOCABULARY LEARNING • MADRASAH TSANAWIYAH
+            </p>
+            <h3 class="arabic-text text-3xl sm:text-4xl font-bold text-amber-600">شَهَادَةُ التَّقْدِيرِ</h3>
+            <h4 class="text-xl sm:text-2xl font-extrabold text-emerald-950 tracking-wide uppercase">
+              Sertifikat Penghargaan Belajar
+            </h4>
+
+            <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto pt-1">
+              Diberikan dengan penuh kebanggaan kepada penuntut ilmu:
+            </p>
+
+            <div class="py-2">
+              <p id="cert-student-name" class="text-2xl sm:text-3xl font-extrabold text-emerald-900 border-b-2 border-amber-400 inline-block px-8 pb-1">
+                Nama Lengkap Siswa
+              </p>
+              <p id="cert-student-class" class="text-xs sm:text-sm font-bold text-slate-600 mt-1">
+                Kelas: VIII-A • Nomor Absen: 12
+              </p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-700 max-w-2xl mx-auto leading-relaxed">
+              Telah menyelesaikan pembelajaran kosakata bahasa Arab bertema <strong>"عُلَمَاءُ الْإِسْلَامِ – إِمَامُ الْغَزَالِيِّ" (Tokoh Ilmuwan Islam – Imam Al-Ghazali)</strong> dengan perolehan nilai akhir <strong id="cert-score" class="text-emerald-900">100</strong> dan predikat <strong id="cert-predicate" class="text-amber-700">ممتاز (Istimewa)</strong>.
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-between max-w-xl mx-auto text-xs text-slate-600 gap-4 border-t border-amber-200 mt-4">
+              <div class="text-center sm:text-left">
+                <p class="font-bold text-emerald-900">Tanggal Kelulusan:</p>
+                <p id="cert-date">-</p>
+              </div>
+              <div class="text-center">
+                <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 font-extrabold border border-emerald-300">
+                  <i class="fa-solid fa-seal-check text-amber-600 mr-1"></i> Terverifikasi Sistem
+                </span>
+              </div>
+              <div class="text-center sm:text-right">
+                <p class="arabic-text text-base font-bold text-emerald-900">مَعَ التَّمَنِّيَاتِ بِالتَّوْفِيقِ وَالنَّجَاحِ</p>
+                <p class="text-[11px]">Semoga sukses dalam menuntut ilmu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-emerald-950 text-emerald-200 border-t-2 border-amber-400/60 mt-12 py-6 px-4 text-center">
+    <p class="arabic-text text-lg font-bold text-amber-300">تَعَلَّمِ الْمُفْرَدَاتِ، وَاكْتَشِفْ عَالَمَ الْعُلَمَاءِ</p>
+    <p class="text-xs sm:text-sm font-semibold text-white mt-0.5">
+      AL-GHAZALI ARABIC VOCABULARY LEARNING • Media Pembelajaran Bahasa Arab MTs
+    </p>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT DATA & APPLICATION LOGIC                                   -->
+  <!-- ===================================================================== -->
+  <script>
+    // -----------------------------------------------------------------------
+    // 1. DATA 28 MUFRODAT (4 KATEGORI LENGKAP DENGAN CONTOH KALIMAT & IKON)
+    // -----------------------------------------------------------------------
+    const MUFRODAT_LIST = [
+      // KATEGORI A: Tokoh dan Profesi (6)
+      { id: 1, cat: 'A', catName: 'Tokoh & Profesi', arabic: 'عَالِمٌ', meaning: 'Ilmuwan', icon: 'fa-user-graduate', sentenceAr: 'الْإِمَامُ الْغَزَالِيُّ عَالِمٌ مُسْلِمٌ مَشْهُورٌ.', sentenceId: 'Imam Al-Ghazali adalah seorang ilmuwan Muslim yang terkenal.' },
+      { id: 2, cat: 'A', catName: 'Tokoh & Profesi', arabic: 'إِمَامٌ', meaning: 'Imam / Pemimpin', icon: 'fa-mosque', sentenceAr: 'لُقِّبَ الْغَزَالِيُّ بِإِمَامِ حُجَّةِ الْإِسْلَامِ.', sentenceId: 'Al-Ghazali digelari sebagai Imam Hujjatul Islam.' },
+      { id: 3, cat: 'A', catName: 'Tokoh & Profesi', arabic: 'فَقِيهٌ', meaning: 'Ahli fikih', icon: 'fa-scale-balanced', sentenceAr: 'كَانَ الْغَزَالِيُّ فَقِيهًا عَظِيمًا فِي عَصْرِهِ.', sentenceId: 'Al-Ghazali adalah seorang ahli fikih yang agung pada masanya.' },
+      { id: 4, cat: 'A', catName: 'Tokoh & Profesi', arabic: 'مُعَلِّمٌ', meaning: 'Guru', icon: 'fa-chalkboard-user', sentenceAr: 'يَشْرَحُ الْمُعَلِّمُ الدَّرْسَ أَمَامَ الطُّلَّابِ.', sentenceId: 'Guru menjelaskan pelajaran di hadapan para siswa.' },
+      { id: 5, cat: 'A', catName: 'Tokoh & Profesi', arabic: 'طَالِبٌ', meaning: 'Siswa', icon: 'fa-book-reader', sentenceAr: 'يَجْتَهِدُ الطَّالِبُ فِي تَعَلُّمِ اللُّغَةِ الْعَرَبِيَّةِ.', sentenceId: 'Siswa bersungguh-sungguh dalam mempelajari bahasa Arab.' },
+      { id: 6, cat: 'A', catName: 'Tokoh & Profesi', arabic: 'مُؤَلِّفٌ', meaning: 'Pengarang', icon: 'fa-feather-pointed', sentenceAr: 'الْغَزَالِيُّ مُؤَلِّفُ كِتَابِ إِحْيَاءِ عُلُومِ الدِّينِ.', sentenceId: 'Al-Ghazali adalah pengarang kitab Ihya Ulumuddin.' },
+
+      // KATEGORI B: Pendidikan dan Ilmu (9)
+      { id: 7, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'عِلْمٌ', meaning: 'Ilmu', icon: 'fa-lightbulb', sentenceAr: 'طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ.', sentenceId: 'Menuntut ilmu adalah kewajiban bagi setiap Muslim.' },
+      { id: 8, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'كِتَابٌ', meaning: 'Buku / Kitab', icon: 'fa-book', sentenceAr: 'هٰذَا كِتَابٌ مُفِيدٌ لِطُلَّابِ الْمَدْرَسَةِ.', sentenceId: 'Ini adalah buku yang bermanfaat bagi siswa madrasah.' },
+      { id: 9, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'مَكْتَبَةٌ', meaning: 'Perpustakaan', icon: 'fa-building-columns', sentenceAr: 'يَقْرَأُ الطُّلَّابُ الْكُتُبَ فِي الْمَكْتَبَةِ.', sentenceId: 'Para siswa membaca buku-buku di perpustakaan.' },
+      { id: 10, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'دَرْسٌ', meaning: 'Pelajaran', icon: 'fa-person-chalkboard', sentenceAr: 'نَتَعَلَّمُ الْيَوْمَ دَرْسَ اللُّغَةِ الْعَرَبِيَّةِ.', sentenceId: 'Hari ini kita mempelajari pelajaran bahasa Arab.' },
+      { id: 11, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'قِرَاءَةٌ', meaning: 'Membaca', icon: 'fa-book-open', sentenceAr: 'الْقِرَاءَةُ مِفْتَاحُ الْعِلْمِ وَالْمَعْرِفَةِ.', sentenceId: 'Membaca adalah kunci ilmu dan pengetahuan.' },
+      { id: 12, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'كِتَابَةٌ', meaning: 'Menulis', icon: 'fa-pen-nib', sentenceAr: 'تُفِيدُ الْكِتَابَةُ فِي حِفْظِ الْعُلُومِ.', sentenceId: 'Menulis bermanfaat dalam menjaga ilmu-ilmu.' },
+      { id: 13, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'فِقْهٌ', meaning: 'Ilmu fikih', icon: 'fa-scroll', sentenceAr: 'دَرَسَ الْغَزَالِيُّ عِلْمَ الْفِقْهِ مُنْذُ صِغَرِهِ.', sentenceId: 'Al-Ghazali mempelajari ilmu fikih sejak kecil.' },
+      { id: 14, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'حِكْمَةٌ', meaning: 'Hikmah', icon: 'fa-gem', sentenceAr: 'فِي كَلَامِ الْعُلَمَاءِ حِكْمَةٌ عَظِيمَةٌ.', sentenceId: 'Di dalam perkataan para ulama terdapat hikmah yang agung.' },
+      { id: 15, cat: 'B', catName: 'Pendidikan & Ilmu', arabic: 'مَعْرِفَةٌ', meaning: 'Pengetahuan', icon: 'fa-brain', sentenceAr: 'تَزْدَادُ الْمَعْرِفَةُ بِالْبَحْثِ وَالْمُطَالَعَةِ.', sentenceId: 'Pengetahuan bertambah dengan penelitian dan membaca.' },
+
+      // KATEGORI C: Kehidupan dan Tempat (8)
+      { id: 16, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'مَدِينَةٌ', meaning: 'Kota', icon: 'fa-city', sentenceAr: 'طُوسُ مَدِينَةٌ تَارِيخِيَّةٌ مَعْرُوفَةٌ.', sentenceId: 'Tus adalah sebuah kota bersejarah yang terkenal.' },
+      { id: 17, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'طُوسٌ', meaning: 'Tus (Kota Kelahiran Al-Ghazali)', icon: 'fa-location-dot', sentenceAr: 'وُلِدَ الْإِمَامُ الْغَزَالِيُّ فِي طُوسَ.', sentenceId: 'Imam Al-Ghazali dilahirkan di Tus.' },
+      { id: 18, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'بَغْدَادُ', meaning: 'Baghdad', icon: 'fa-landmark-dome', sentenceAr: 'دَرَّسَ الْغَزَالِيُّ فِي الْمَدْرَسَةِ النِّظَامِيَّةِ بِبَغْدَادَ.', sentenceId: 'Al-Ghazali mengajar di Madrasah Nizamiyah di Baghdad.' },
+      { id: 19, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'مَسْجِدٌ', meaning: 'Masjid', icon: 'fa-mosque', sentenceAr: 'يُصَلِّي الْمُسْلِمُونَ فِي الْمَسْجِدِ جَمَاعَةً.', sentenceId: 'Kaum Muslimin shalat berjamaah di masjid.' },
+      { id: 20, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'مَدْرَسَةٌ', meaning: 'Madrasah / Sekolah', icon: 'fa-school', sentenceAr: 'يَذْهَبُ التَّلَامِيذُ إِلَى الْمَدْرَسَةِ صَبَاحًا.', sentenceId: 'Para murid pergi ke madrasah pada pagi hari.' },
+      { id: 21, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'رِحْلَةٌ', meaning: 'Perjalanan', icon: 'fa-route', sentenceAr: 'قَامَ الْغَزَالِيُّ بِرِحْلَةٍ طَوِيلَةٍ لِطَلَبِ الْحَقِّ.', sentenceId: 'Al-Ghazali melakukan perjalanan panjang untuk mencari kebenaran.' },
+      { id: 22, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'زَمَنٌ', meaning: 'Masa / Zaman', icon: 'fa-hourglass-half', sentenceAr: 'عَاشَ الْغَزَالِيُّ فِي زَمَنِ ازْدِهَارِ الْعِلْمِ.', sentenceId: 'Al-Ghazali hidup pada masa kejayaan ilmu pengetahuan.' },
+      { id: 23, cat: 'C', catName: 'Kehidupan & Tempat', arabic: 'حَيَاةٌ', meaning: 'Kehidupan', icon: 'fa-seedling', sentenceAr: 'الْعِلْمُ يُنِيرُ حَيَاةَ الْإِنْسَانِ.', sentenceId: 'Ilmu menerangi kehidupan manusia.' },
+
+      // KATEGORI D: Akhlak dan Nilai Islam (5)
+      { id: 24, cat: 'D', catName: 'Akhlak & Nilai Islam', arabic: 'أَخْلَاقٌ', meaning: 'Akhlak / Budi pekerti', icon: 'fa-heart', sentenceAr: 'الْأَخْلَاقُ الْكَرِيمَةُ أَسَاسُ النَّجَاحِ.', sentenceId: 'Akhlak yang mulia adalah fondasi kesuksesan.' },
+      { id: 25, cat: 'D', catName: 'Akhlak & Nilai Islam', arabic: 'صِدْقٌ', meaning: 'Kejujuran', icon: 'fa-handshake', sentenceAr: 'الصِّدْقُ يَهْدِي إِلَى الْبِرِّ وَالْجَنَّةِ.', sentenceId: 'Kejujuran membimbing menuju kebaikan dan surga.' },
+      { id: 26, cat: 'D', catName: 'Akhlak & Nilai Islam', arabic: 'تَوَاضُعٌ', meaning: 'Rendah hati', icon: 'fa-hands-holding-circle', sentenceAr: 'التَّوَاضُعُ مِنْ صِفَاتِ الْعُلَمَاءِ الصَّالِحِينَ.', sentenceId: 'Rendah hati termasuk sifat para ulama yang saleh.' },
+      { id: 27, cat: 'D', catName: 'Akhlak & Nilai Islam', arabic: 'إِخْلَاصٌ', meaning: 'Ikhlas', icon: 'fa-sun', sentenceAr: 'نَطْلُبُ الْعِلْمَ بِإِخْلَاصٍ لِلّٰهِ تَعَالَى.', sentenceId: 'Kita menuntut ilmu dengan ikhlas karena Allah Ta’ala.' },
+      { id: 28, cat: 'D', catName: 'Akhlak & Nilai Islam', arabic: 'عِبَادَةٌ', meaning: 'Ibadah', icon: 'fa-star-and-crescent', sentenceAr: 'تَعَلُّمُ الْعِلْمِ النَّافِعِ عِبَادَةٌ عَظِيمَةٌ.', sentenceId: 'Mempelajari ilmu yang bermanfaat adalah ibadah yang agung.' }
+    ];
+
+    // -----------------------------------------------------------------------
+    // 2. DATA 20 SOAL KUIS PILIHAN GANDA (TINGKAT MTs)
+    // -----------------------------------------------------------------------
+    const QUIZ_QUESTIONS = [
+      {
+        qId: 'Di kota manakah Imam Abu Hamid Al-Ghazali dilahirkan?',
+        qAr: 'فِي أَيِّ مَدِينَةٍ وُلِدَ الْإِمَامُ أَبُو حَامِدٍ الْغَزَالِيُّ؟',
+        options: ['مَدِينَةِ طُوسَ (Kota Tus)', 'مَدِينَةِ مَكَّةَ (Kota Makkah)', 'مَدِينَةِ الْقَاهِرَةِ (Kota Kairo)', 'مَدِينَةِ دِمَشْقَ (Kota Damaskus)'],
+        correct: 0
+      },
+      {
+        qId: 'Pada tahun berapakah Imam Al-Ghazali dilahirkan menurut kalender Hijriah?',
+        qAr: 'فِي أَيِّ سَنَةٍ وُلِدَ الْإِمَامُ الْغَزَالِيُّ؟',
+        options: ['سَنَةَ ٤٠٠ هِجْرِيَّةٍ (400 H)', 'سَنَةَ ٤٥٠ هِجْرِيَّةٍ (450 H)', 'سَنَةَ ٥٠٠ هِجْرِيَّةٍ (500 H)', 'سَنَةَ ٥٠٥ هِجْرِيَّةٍ (505 H)'],
+        correct: 1
+      },
+      {
+        qId: 'Apa nama kitab karya Imam Al-Ghazali yang paling terkenal dalam biografi?',
+        qAr: 'مَا أَشْهَرُ كُتُبِ الْإِمَامِ الْغَزَالِيِّ؟',
+        options: ['رِيَاضُ الصَّالِحِينَ', 'إِحْيَاءُ عُلُومِ الدِّينِ', 'صَحِيحُ الْبُخَارِيِّ', 'تَفْسِيرُ الْجَلَالَيْنِ'],
+        correct: 1
+      },
+      {
+        qId: 'Pada tahun berapakah Imam Al-Ghazali wafat di kota Tus?',
+        qAr: 'فِي أَيِّ سَنَةٍ تُوُفِّيَ الْإِمَامُ الْغَزَالِيُّ فِي طُوسَ؟',
+        options: ['سَنَةَ ٤٥٠ هِجْرِيَّةٍ', 'سَنَةَ ٤٨٠ هِجْرِيَّةٍ', 'سَنَةَ ٥٠٥ هِجْرِيَّةٍ', 'سَنَةَ ٥٥٠ هِجْرِيَّةٍ'],
+        correct: 2
+      },
+      {
+        qId: 'Apa arti dari mufrodat «عَالِمٌ» dalam bahasa Indonesia?',
+        qAr: 'مَا مَعْنَى كَلِمَةِ «عَالِمٌ»؟',
+        options: ['Siswa', 'Perpustakaan', 'Ilmuwan', 'Perjalanan'],
+        correct: 2
+      },
+      {
+        qId: 'Bahasa Arab dari kata "Pengarang" adalah...',
+        qAr: 'مَا الْكَلِمَةُ الْعَرَبِيَّةُ لِمَعْنَى «Pengarang»؟',
+        options: ['طَالِبٌ', 'مُؤَلِّفٌ', 'مَسْجِدٌ', 'زَمَنٌ'],
+        correct: 1
+      },
+      {
+        qId: 'Apa arti yang tepat untuk kosakata «مَكْتَبَةٌ»?',
+        qAr: 'مَا مَعْنَى كَلِمَةِ «مَكْتَبَةٌ»؟',
+        options: ['Madrasah', 'Kota', 'Pelajaran', 'Perpustakaan'],
+        correct: 3
+      },
+      {
+        qId: 'Kosakata «فَقِيهٌ» memiliki arti...',
+        qAr: 'مَا مَعْنَى كَلِمَةِ «فَقِيهٌ»؟',
+        options: ['Ahli fikih', 'Guru', 'Kejujuran', 'Kehidupan'],
+        correct: 0
+      },
+      {
+        qId: 'Manakah kosakata bahasa Arab yang berarti "Rendah hati"?',
+        qAr: 'أَيُّ كَلِمَةٍ تَعْنِي «Rendah hati»؟',
+        options: ['صِدْقٌ', 'تَوَاضُعٌ', 'إِخْلَاصٌ', 'عِبَادَةٌ'],
+        correct: 1
+      },
+      {
+        qId: 'Lengkapilah kalimat berikut: «الْقِرَاءَةُ مِفْتَاحُ الْعِلْمِ وَ...»',
+        qAr: 'أَكْمِلِ الْجُمْلَةَ: «الْقِرَاءَةُ مِفْتَاحُ الْعِلْمِ وَ...»',
+        options: ['الْمَعْرِفَةِ (Pengetahuan)', 'الْمَدِينَةِ (Kota)', 'الرِّحْلَةِ (Perjalanan)', 'الْمَسْجِدِ (Masjid)'],
+        correct: 0
+      },
+      {
+        qId: 'Apa arti dari kosakata «حِكْمَةٌ»?',
+        qAr: 'مَا مَعْنَى كَلِمَةِ «حِكْمَةٌ»؟',
+        options: ['Menulis', 'Membaca', 'Hikmah / Kebijaksanaan', 'Masa / Zaman'],
+        correct: 2
+      },
+      {
+        qId: 'Kota pusat keilmuan tempat Imam Al-Ghazali pernah mengajar adalah...',
+        qAr: 'دَرَّسَ الْغَزَالِيُّ فِي الْمَدْرَسَةِ النِّظَامِيَّةِ بِمَدِينَةِ...',
+        options: ['بَغْدَادَ (Baghdad)', 'جَاكَرْتَا (Jakarta)', 'مَدِينَةٍ صَغِيرَةٍ', 'قَرْيَةٍ'],
+        correct: 0
+      },
+      {
+        qId: 'Apa bahasa Arab dari kata "Kejujuran"?',
+        qAr: 'مَا الْكَلِمَةُ الْعَرَبِيَّةُ لِمَعْنَى «Kejujuran»؟',
+        options: ['أَخْلَاقٌ', 'صِدْقٌ', 'حَيَاةٌ', 'كِتَابٌ'],
+        correct: 1
+      },
+      {
+        qId: 'Kosakata «رِحْلَةٌ» dalam bahasa Indonesia berarti...',
+        qAr: 'مَا مَعْنَى كَلِمَةِ «رِحْلَةٌ»؟',
+        options: ['Perjalanan', 'Pelajaran', 'Ilmu fikih', 'Guru'],
+        correct: 0
+      },
+      {
+        qId: 'Perhatikan kalimat: «يَشْرَحُ ... الدَّرْسَ أَمَامَ الطُّلَّابِ.» Kata yang tepat untuk melengkapinya adalah...',
+        qAr: 'يَشْرَحُ ... الدَّرْسَ أَمَامَ الطُّلَّابِ.',
+        options: ['الْمُعَلِّمُ (Guru)', 'الْكِتَابُ (Buku)', 'الْمَسْجِدُ (Masjid)', 'الزَّمَنُ (Masa)'],
+        correct: 0
+      },
+      {
+        qId: 'Apa arti dari mufrodat «كِتَابَةٌ»?',
+        qAr: 'مَا مَعْنَى كَلِمَةِ «كِتَابَةٌ»؟',
+        options: ['Membaca', 'Menulis', 'Ibadah', 'Akhlak'],
+        correct: 1
+      },
+      {
+        qId: 'Manakah di antara kata berikut yang termasuk kategori Akhlak & Nilai Islam?',
+        qAr: 'أَيُّ كَلِمَةٍ تَتَعَلَّقُ بِالْأَخْلَاقِ وَالْقِيَمِ الْإِسْلَامِيَّةِ؟',
+        options: ['إِخْلَاصٌ (Ikhlas)', 'مَدِينَةٌ (Kota)', 'كِتَابٌ (Buku)', 'طَالِبٌ (Siswa)'],
+        correct: 0
+      },
+      {
+        qId: 'Apa arti kalimat berikut: «الْعِلْمُ يُنِيرُ حَيَاةَ الْإِنْسَانِ»?',
+        qAr: 'مَا مَعْنَى: «الْعِلْمُ يُنِيرُ حَيَاةَ الْإِنْسَانِ»؟',
+        options: ['Ilmu menerangi kehidupan manusia', 'Siswa membaca buku di madrasah', 'Imam Al-Ghazali lahir di kota Tus', 'Kejujuran membawa kebaikan'],
+        correct: 0
+      },
+      {
+        qId: 'Bahasa Arab dari kata "Masa / Zaman" adalah...',
+        qAr: 'مَا الْكَلِمَةُ الْعَرَبِيَّةُ لِمَعْنَى «Masa / Zaman»؟',
+        options: ['زَمَنٌ', 'دَرْسٌ', 'إِمَامٌ', 'فِقْهٌ'],
+        correct: 0
+      },
+      {
+        qId: 'Selain ilmu fikih dan filsafat, bidang ilmu apa lagi yang ditekuni Imam Al-Ghazali menurut teks biografi?',
+        qAr: 'اهْتَمَّ الْغَزَالِيُّ بِالْعِلْمِ وَالْفِقْهِ وَالْفَلْسَفَةِ وَ...',
+        options: ['التَّصَوُّفِ (Tasawuf)', 'الْهَنْدَسَةِ (Teknik)', 'الطِّبِّ (Kedokteran)', 'الْفَلَكِ (Astronomi)'],
+        correct: 0
+      }
+    ];
+
+    // -----------------------------------------------------------------------
+    // 3. DATA LATIHAN 3 (MELENGKAPI KALIMAT) & LATIHAN 4 (MENYUSUN KALIMAT)
+    // -----------------------------------------------------------------------
+    const FILL_BLANK_ITEMS = [
+      {
+        sentence: 'وُلِدَ الْإِمَامُ الْغَزَالِيُّ فِي ....... طُوسَ.',
+        hint: 'Petunjuk: Imam Al-Ghazali dilahirkan di (kota) Tus.',
+        options: ['مَدِينَةِ', 'مَكْتَبَةِ', 'حِكْمَةِ'],
+        correct: 'مَدِينَةِ'
+      },
+      {
+        sentence: 'يَقْرَأُ الطَّالِبُ الْكُتُبَ فِي .......',
+        hint: 'Petunjuk: Siswa membaca buku-buku di (perpustakaan).',
+        options: ['الْمَكْتَبَةِ', 'الرِّحْلَةِ', 'الصِّدْقِ'],
+        correct: 'الْمَكْتَبَةِ'
+      },
+      {
+        sentence: 'الْغَزَالِيُّ ....... كِتَابِ إِحْيَاءِ عُلُومِ الدِّينِ.',
+        hint: 'Petunjuk: Al-Ghazali adalah (pengarang) kitab Ihya Ulumuddin.',
+        options: ['مُؤَلِّفُ', 'طَالِبُ', 'مَسْجِدُ'],
+        correct: 'مُؤَلِّفُ'
+      },
+      {
+        sentence: 'نَطْلُبُ الْعِلْمَ بِـ ....... لِلّٰهِ تَعَالَى.',
+        hint: 'Petunjuk: Kita menuntut ilmu dengan (ikhlas) karena Allah Ta’ala.',
+        options: ['إِخْلَاصٍ', 'مَدِينَةٍ', 'زَمَنٍ'],
+        correct: 'إِخْلَاصٍ'
+      },
+      {
+        sentence: 'التَّوَاضُعُ وَ....... مِنْ أَخْلَاقِ الْعُلَمَاءِ.',
+        hint: 'Petunjuk: Rendah hati dan (kejujuran) termasuk akhlak para ulama.',
+        options: ['الصِّدْقُ', 'الْكِتَابُ', 'الدَّرْسُ'],
+        correct: 'الصِّدْقُ'
+      },
+      {
+        sentence: 'يَذْهَبُ التَّلَامِيذُ إِلَى ....... صَبَاحًا.',
+        hint: 'Petunjuk: Para murid pergi ke (madrasah) pada pagi hari.',
+        options: ['الْمَدْرَسَةِ', 'الْفِقْهِ', 'الْحَيَاةِ'],
+        correct: 'الْمَدْرَسَةِ'
+      }
+    ];
+
+    const SENTENCE_BUILD_ITEMS = [
+      {
+        targetId: 'Imam Al-Ghazali adalah seorang ilmuwan yang terkenal.',
+        words: ['الْإِمَامُ', 'الْغَزَالِيُّ', 'عَالِمٌ', 'مَشْهُورٌ']
+      },
+      {
+        targetId: 'Siswa membaca buku di perpustakaan.',
+        words: ['يَقْرَأُ', 'الطَّالِبُ', 'الْكِتَابَ', 'فِي', 'الْمَكْتَبَةِ']
+      },
+      {
+        targetId: 'Guru menjelaskan pelajaran di madrasah.',
+        words: ['يَشْرَحُ', 'الْمُعَلِّمُ', 'الدَّرْسَ', 'فِي', 'الْمَدْرَسَةِ']
+      },
+      {
+        targetId: 'Menuntut ilmu adalah ibadah yang agung.',
+        words: ['طَلَبُ', 'الْعِلْمِ', 'عِبَادَةٌ', 'عَظِيمَةٌ']
+      },
+      {
+        targetId: 'Akhlak yang mulia adalah fondasi kesuksesan.',
+        words: ['الْأَخْلَاقُ', 'الْكَرِيمَةُ', 'أَسَاسُ', 'النَّجَاحِ']
+      }
+    ];
+
+    // -----------------------------------------------------------------------
+    // 4. STATE & LOCALSTORAGE MANAGEMENT
+    // -----------------------------------------------------------------------
+    const STORAGE_KEY = 'alghazali_arabic_mts_v1';
+    let appState = {
+      learnedIds: [],
+      student: { name: '', className: '', absen: '' },
+      bestScore: null,
+      certificateEarned: false
+    };
+
+    function loadAppState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          appState = { ...appState, ...JSON.parse(saved) };
+        }
+      } catch (e) {
+        console.warn('LocalStorage tidak tersedia:', e);
+      }
+      updateProgressUI();
+    }
+
+    function saveAppState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      } catch (e) {
+        console.warn('Gagal menyimpan progres:', e);
+      }
+      updateProgressUI();
+    }
+
+    function updateProgressUI() {
+      const count = appState.learnedIds.length;
+      const pct = Math.round((count / MUFRODAT_LIST.length) * 100);
+
+      document.getElementById('header-progress-pill').textContent = `${count}/28 Mufrodat`;
+      document.getElementById('home-vocab-count').textContent = `${count} / 28`;
+      document.getElementById('home-vocab-percent').textContent = `${pct}%`;
+      document.getElementById('home-vocab-bar').style.width = `${pct}%`;
+
+      if (appState.student.name) {
+        document.getElementById('home-student-greeting').textContent =
+          `Ahlan wa Sahlan, ${appState.student.name} (Kelas ${appState.student.className})! Teruskan semangat belajarmu.`;
+      }
+      if (appState.bestScore !== null) {
+        document.getElementById('home-quiz-score').textContent = `${appState.bestScore} / 100`;
+      }
+      if (appState.certificateEarned) {
+        const certEl = document.getElementById('home-cert-status');
+        certEl.textContent = 'Lulus ✓';
+        certEl.className = 'text-xs sm:text-sm font-extrabold text-emerald-700 mt-1 block';
+      }
+    }
+
+    // -----------------------------------------------------------------------
+    // 5. WEB SPEECH API (ARABIC TTS) & WEB AUDIO API (SFX BENAR/SALAH)
+    // -----------------------------------------------------------------------
+    function showToast(msg, icon = 'fa-volume-high') {
+      const box = document.getElementById('toast-box');
+      document.getElementById('toast-message').textContent = msg;
+      document.getElementById('toast-icon').className = `fa-solid ${icon} text-amber-400 text-lg`;
+      box.classList.remove('hidden');
+      requestAnimationFrame(() => box.classList.remove('translate-y-4', 'opacity-0'));
+
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        box.classList.add('translate-y-4', 'opacity-0');
+        setTimeout(() => box.classList.add('hidden'), 300);
+      }, 3000);
+    }
+
+    function speakArabic(text, label = '') {
+      if (!('speechSynthesis' in window)) {
+        showToast('Browser ini belum mendukung fitur suara otomatis.', 'fa-circle-exclamation');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'ar-SA';
+      utter.rate = 0.85;
+
+      const voices = window.speechSynthesis.getVoices();
+      const arVoice = voices.find(v => v.lang.toLowerCase().includes('ar'));
+      if (arVoice) utter.voice = arVoice;
+
+      utter.onstart = () => {
+        if (label) showToast(`Melafalkan: ${label}`, 'fa-volume-high');
+      };
+      utter.onerror = () => {
+        if (label) showToast(`Teks Arab: ${label}`, 'fa-comment-dots');
+      };
+      window.speechSynthesis.speak(utter);
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        showToast('Audio dihentikan.', 'fa-stop');
+      }
+    }
+
+    function speakBioText() {
+      const bio = document.getElementById('bio-arabic-text').textContent.trim();
+      speakArabic(bio, 'Biografi Imam Al-Ghazali');
+    }
+
+    // Efek Suara Web Audio API (Tanpa File Eksternal)
+    function playSoundEffect(isCorrect) {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        const ctx = new AudioCtx();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        if (isCorrect) {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+          osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1); // E5
+          osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2); // G5
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.45);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.45);
+        } else {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(220, ctx.currentTime);
+          osc.frequency.linearRampToValueAtTime(165, ctx.currentTime + 0.28);
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.32);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.32);
+        }
+      } catch (e) {
+        // Abaikan jika browser memblokir audio context
+      }
+    }
+
+    // -----------------------------------------------------------------------
+    // 6. NAVIGASI HALAMAN
+    // -----------------------------------------------------------------------
+    function navigateTo(pageId) {
+      stopSpeech();
+      ['home', 'materi', 'latihan', 'kuis'].forEach(id => {
+        const page = document.getElementById(`page-${id}`);
+        const btn = document.getElementById(`nav-${id}`);
+        if (id === pageId) {
+          page.classList.remove('hidden');
+          btn.className = 'nav-btn px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 border bg-emerald-800 text-white border-emerald-900 shadow-xs';
+        } else {
+          page.classList.add('hidden');
+          btn.className = 'nav-btn px-3 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 border bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-50';
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (pageId === 'kuis' && appState.student.name) {
+        document.getElementById('student-name').value = appState.student.name;
+        document.getElementById('student-class').value = appState.student.className;
+        document.getElementById('student-absen').value = appState.student.absen;
+      }
+    }
+
+    // -----------------------------------------------------------------------
+    // 7. LOGIKA HALAMAN MATERI (KARTU MUFRODAT & FLASHCARD 3D)
+    // -----------------------------------------------------------------------
+    let activeCategory = 'all';
+    let vocabViewMode = 'grid';
+    let flashcardDeck = [...MUFRODAT_LIST];
+    let flashcardIndex = 0;
+    let isFlashcardFlipped = false;
+
+    function getFilteredVocab() {
+      if (activeCategory === 'all') return MUFRODAT_LIST;
+      return MUFRODAT_LIST.filter(v => v.cat === activeCategory);
+    }
+
+    function filterVocabCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.className = 'cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-400 text-emerald-950 border-2 border-amber-500 shadow-xs transition';
+        } else {
+          btn.className = 'cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-emerald-900 border border-emerald-200 hover:bg-emerald-50 transition';
+        }
+      });
+
+      renderVocabGrid();
+      flashcardDeck = [...getFilteredVocab()];
+      flashcardIndex = 0;
+      isFlashcardFlipped = false;
+      renderFlashcard();
+    }
+
+    function setVocabViewMode(mode) {
+      vocabViewMode = mode;
+      const gridEl = document.getElementById('vocab-grid-container');
+      const fcEl = document.getElementById('vocab-flashcard-container');
+      const btnGrid = document.getElementById('btn-mode-grid');
+      const btnFc = document.getElementById('btn-mode-flashcard');
+
+      if (mode === 'grid') {
+        gridEl.classList.remove('hidden');
+        fcEl.classList.add('hidden');
+        btnGrid.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-emerald-800 text-white shadow-xs transition flex items-center gap-2';
+        btnFc.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold text-emerald-900 hover:bg-white transition flex items-center gap-2';
+      } else {
+        gridEl.classList.add('hidden');
+        fcEl.classList.remove('hidden');
+        btnFc.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-emerald-800 text-white shadow-xs transition flex items-center gap-2';
+        btnGrid.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold text-emerald-900 hover:bg-white transition flex items-center gap-2';
+        flashcardDeck = [...getFilteredVocab()];
+        flashcardIndex = 0;
+        isFlashcardFlipped = false;
+        renderFlashcard();
+      }
+    }
+
+    function toggleLearnedVocab(id) {
+      const idx = appState.learnedIds.indexOf(id);
+      if (idx === -1) {
+        appState.learnedIds.push(id);
+        playSoundEffect(true);
+      } else {
+        appState.learnedIds.splice(idx, 1);
+      }
+      saveAppState();
+      renderVocabGrid();
+      renderFlashcard();
+    }
+
+    function renderVocabGrid() {
+      const container = document.getElementById('vocab-grid-container');
+      const list = getFilteredVocab();
+
+      container.innerHTML = list.map(item => {
+        const isLearned = appState.learnedIds.includes(item.id);
+        return `
+          <div class="bg-white rounded-3xl p-5 border-2 ${isLearned ? 'border-emerald-500 bg-emerald-50/30' : 'border-emerald-200'} shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                  ${item.catName}
+                </span>
+                <button onclick="speakArabic('${item.arabic}', '${item.arabic} (${item.meaning})')"
+                  title="Dengarkan Pelafalan Mufrodat"
+                  class="w-9 h-9 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-amber-300 flex items-center justify-center shadow-xs transition">
+                  <i class="fa-solid fa-volume-high text-sm"></i>
+                </button>
+              </div>
+
+              <!-- Ilustrasi & Kata Arab -->
+              <div class="flex items-center justify-between gap-3 bg-gradient-to-r from-emerald-50 to-amber-50/60 p-4 rounded-2xl border border-emerald-100">
+                <div class="w-12 h-12 rounded-2xl bg-white border border-amber-300 flex items-center justify-center text-emerald-800 text-xl shadow-xs flex-shrink-0">
+                  <i class="fa-solid ${item.icon}"></i>
+                </div>
+                <div class="text-right flex-1">
+                  <p class="arabic-text text-3xl sm:text-4xl font-bold text-emerald-950">${item.arabic}</p>
+                  <p class="text-sm font-extrabold text-amber-700">${item.meaning}</p>
+                </div>
+              </div>
+
+              <!-- Contoh Kalimat -->
+              <div class="mt-3.5 bg-slate-50 rounded-2xl p-3.5 border border-slate-200 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-extrabold uppercase text-slate-400">Contoh Kalimat</span>
+                  <button onclick="speakArabic('${item.sentenceAr}', 'Contoh Kalimat')"
+                    class="text-[11px] font-bold text-emerald-700 hover:text-emerald-900 flex items-center gap-1">
+                    <i class="fa-solid fa-play"></i> Putar
+                  </button>
+                </div>
+                <p class="arabic-text text-xl font-bold text-emerald-950 text-right">${item.sentenceAr}</p>
+                <p class="text-xs text-slate-600 leading-snug">"${item.sentenceId}"</p>
+              </div>
+            </div>
+
+            <!-- Tombol Tandai Dipelajari -->
+            <button onclick="toggleLearnedVocab(${item.id})"
+              class="w-full py-2.5 px-4 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-2 ${
+                isLearned 
+                  ? 'bg-emerald-700 text-white' 
+                  : 'bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300'
+              }">
+              <i class="fa-solid ${isLearned ? 'fa-circle-check' : 'fa-circle'}"></i>
+              <span>${isLearned ? 'Sudah Dipelajari ✓' : 'Tandai Sudah Dipelajari'}</span>
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Flashcard Functions
+    function renderFlashcard() {
+      if (!flashcardDeck.length) return;
+      const item = flashcardDeck[flashcardIndex];
+      const inner = document.getElementById('flashcard-inner');
+      inner.classList.toggle('rotate-y-180', isFlashcardFlipped);
+
+      document.getElementById('flashcard-counter').textContent = `Kartu ${flashcardIndex + 1} dari ${flashcardDeck.length}`;
+      document.getElementById('flashcard-cat-label').textContent = item.catName;
+      document.getElementById('fc-front-icon').innerHTML = `<i class="fa-solid ${item.icon}"></i>`;
+      document.getElementById('fc-arabic-word').textContent = item.arabic;
+      document.getElementById('fc-meaning').textContent = item.meaning;
+      document.getElementById('fc-sentence-ar').textContent = item.sentenceAr;
+      document.getElementById('fc-sentence-id').textContent = `"${item.sentenceId}"`;
+
+      const isLearned = appState.learnedIds.includes(item.id);
+      const btn = document.getElementById('fc-learned-btn');
+      btn.innerHTML = isLearned 
+        ? '<i class="fa-solid fa-circle-check"></i> Sudah Dipelajari ✓' 
+        : '<i class="fa-solid fa-check"></i> Tandai Sudah Dipelajari';
+      btn.className = isLearned
+        ? 'px-5 py-2 rounded-xl bg-emerald-700 text-white text-xs sm:text-sm font-bold flex items-center gap-2'
+        : 'px-5 py-2 rounded-xl bg-amber-400 text-emerald-950 text-xs sm:text-sm font-extrabold flex items-center gap-2';
+    }
+
+    function flipFlashcard() {
+      isFlashcardFlipped = !isFlashcardFlipped;
+      document.getElementById('flashcard-inner').classList.toggle('rotate-y-180', isFlashcardFlipped);
+    }
+
+    function nextFlashcard() {
+      isFlashcardFlipped = false;
+      flashcardIndex = (flashcardIndex + 1) % flashcardDeck.length;
+      renderFlashcard();
+    }
+
+    function prevFlashcard() {
+      isFlashcardFlipped = false;
+      flashcardIndex = (flashcardIndex - 1 + flashcardDeck.length) % flashcardDeck.length;
+      renderFlashcard();
+    }
+
+    function shuffleFlashcards() {
+      flashcardDeck.sort(() => Math.random() - 0.5);
+      flashcardIndex = 0;
+      isFlashcardFlipped = false;
+      renderFlashcard();
+      showToast('Kartu Flashcard diacak!', 'fa-shuffle');
+    }
+
+    function speakFlashcardWord() {
+      const item = flashcardDeck[flashcardIndex];
+      if (item) speakArabic(item.arabic, item.arabic);
+    }
+
+    function speakFlashcardSentence() {
+      const item = flashcardDeck[flashcardIndex];
+      if (item) speakArabic(item.sentenceAr, 'Contoh Kalimat');
+    }
+
+    function toggleFlashcardLearned() {
+      const item = flashcardDeck[flashcardIndex];
+      if (item) toggleLearnedVocab(item.id);
+    }
+
+    // -----------------------------------------------------------------------
+    // 8. LOGIKA HALAMAN LATIHAN INTERAKTIF (4 MODE)
+    // -----------------------------------------------------------------------
+    function switchPracticeMode(num) {
+      [1, 2, 3, 4].forEach(n => {
+        const panel = document.getElementById(`prac-panel-${n}`);
+        const tab = document.getElementById(`prac-tab-${n}`);
+        if (n === num) {
+          panel.classList.remove('hidden');
+          tab.className = 'prac-tab p-3 rounded-2xl text-xs sm:text-sm font-bold border-2 bg-emerald-800 text-white border-emerald-900 transition text-left';
+        } else {
+          panel.classList.add('hidden');
+          tab.className = 'prac-tab p-3 rounded-2xl text-xs sm:text-sm font-bold border-2 bg-white text-emerald-950 border-emerald-200 hover:bg-emerald-50 transition text-left';
+        }
+      });
+    }
+
+    // Latihan 1: Matching Game
+    let matchPairs = [];
+    let selectedArId = null;
+    let selectedIdId = null;
+    let matchedIds = [];
+
+    function initMatchingGame() {
+      const shuffled = [...MUFRODAT_LIST].sort(() => Math.random() - 0.5).slice(0, 5);
+      matchPairs = shuffled;
+      selectedArId = null;
+      selectedIdId = null;
+      matchedIds = [];
+      document.getElementById('match-feedback').classList.add('hidden');
+      renderMatchingLists();
+    }
+
+    function renderMatchingLists() {
+      const arOrder = [...matchPairs].sort((a, b) => a.id - b.id);
+      const idOrder = [...matchPairs].sort((a, b) => a.meaning.localeCompare(b.meaning));
+
+      document.getElementById('match-id-list').innerHTML = idOrder.map(item => {
+        const done = matchedIds.includes(item.id);
+        const sel = selectedIdId === item.id;
+        return `
+          <button onclick="selectMatchItem('id', ${item.id})" ${done ? 'disabled' : ''}
+            class="w-full p-3.5 rounded-2xl border-2 text-left font-bold text-sm transition ${
+              done ? 'bg-emerald-100 border-emerald-400 text-emerald-800 opacity-70' :
+              sel ? 'bg-amber-300 border-emerald-900 text-emerald-950' :
+              'bg-slate-50 hover:bg-amber-50 border-slate-200 text-slate-800'
+            }">
+            ${done ? '✓ ' : ''}${item.meaning}
+          </button>
+        `;
+      }).join('');
+
+      document.getElementById('match-ar-list').innerHTML = arOrder.map(item => {
+        const done = matchedIds.includes(item.id);
+        const sel = selectedArId === item.id;
+        return `
+          <button onclick="selectMatchItem('ar', ${item.id})" ${done ? 'disabled' : ''}
+            class="w-full p-3 rounded-2xl border-2 text-right arabic-text text-2xl font-bold transition ${
+              done ? 'bg-emerald-100 border-emerald-400 text-emerald-800 opacity-70' :
+              sel ? 'bg-amber-300 border-emerald-900 text-emerald-950' :
+              'bg-emerald-50/60 hover:bg-amber-50 border-emerald-200 text-emerald-950'
+            }">
+            ${item.arabic} ${done ? '✓' : ''}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectMatchItem(type, id) {
+      if (type === 'ar') {
+        selectedArId = id;
+        const item = matchPairs.find(i => i.id === id);
+        if (item) speakArabic(item.arabic);
+      } else {
+        selectedIdId = id;
+      }
+
+      if (selectedArId !== null && selectedIdId !== null) {
+        const fb = document.getElementById('match-feedback');
+        fb.classList.remove('hidden');
+        if (selectedArId === selectedIdId) {
+          matchedIds.push(selectedArId);
+          playSoundEffect(true);
+          fb.className = 'p-3.5 rounded-2xl text-sm font-bold bg-emerald-100 text-emerald-900 border border-emerald-400';
+          fb.textContent = matchedIds.length === matchPairs.length
+            ? 'MasyaAllah! Semua pasangan mufrodat berhasil dicocokkan dengan tepat!'
+            : 'Benar! Pasangan kata cocok.';
+        } else {
+          playSoundEffect(false);
+          fb.className = 'p-3.5 rounded-2xl text-sm font-bold bg-rose-100 text-rose-900 border border-rose-300';
+          fb.textContent = 'Belum cocok, silakan coba pasangan lain!';
+        }
+        selectedArId = null;
+        selectedIdId = null;
+      }
+      renderMatchingLists();
+    }
+
+    // Latihan 2: Tebak Arti Cepat
+    let prac2Score = 0;
+    let currentPrac2Word = MUFRODAT_LIST[0];
+
+    function initPrac2() {
+      const pool = [...MUFRODAT_LIST].sort(() => Math.random() - 0.5);
+      currentPrac2Word = pool[0];
+      const distractors = pool.slice(1, 4);
+      const options = [currentPrac2Word, ...distractors].sort(() => Math.random() - 0.5);
+
+      document.getElementById('prac2-word').textContent = currentPrac2Word.arabic;
+      document.getElementById('prac2-feedback').classList.add('hidden');
+      document.getElementById('prac2-options').innerHTML = options.map(opt => `
+        <button onclick="checkPrac2(${opt.id})"
+          class="p-4 rounded-2xl border-2 border-emerald-200 bg-white hover:bg-amber-50 hover:border-amber-400 font-bold text-sm sm:text-base text-slate-800 transition text-left">
+          ${opt.meaning}
+        </button>
+      `).join('');
+    }
+
+    function checkPrac2(chosenId) {
+      const fb = document.getElementById('prac2-feedback');
+      fb.classList.remove('hidden');
+      if (chosenId === currentPrac2Word.id) {
+        prac2Score++;
+        document.getElementById('prac2-score').textContent = `Benar: ${prac2Score}`;
+        playSoundEffect(true);
+        fb.className = 'p-4 rounded-2xl text-sm font-bold bg-emerald-100 text-emerald-900 border border-emerald-400';
+        fb.textContent = `Tepat sekali! "${currentPrac2Word.arabic}" artinya "${currentPrac2Word.meaning}". Memuat kata berikutnya...`;
+        setTimeout(initPrac2, 1200);
+      } else {
+        playSoundEffect(false);
+        fb.className = 'p-4 rounded-2xl text-sm font-bold bg-rose-100 text-rose-900 border border-rose-300';
+        fb.textContent = `Kurang tepat. Coba dengarkan pelafalannya dan pilih lagi!`;
+      }
+    }
+
+    // Latihan 3: Melengkapi Kalimat
+    let prac3Idx = 0;
+
+    function renderPrac3() {
+      const item = FILL_BLANK_ITEMS[prac3Idx];
+      document.getElementById('prac3-counter').textContent = `Soal ${prac3Idx + 1} / ${FILL_BLANK_ITEMS.length}`;
+      document.getElementById('prac3-sentence').textContent = item.sentence;
+      document.getElementById('prac3-hint').textContent = item.hint;
+      document.getElementById('prac3-feedback').classList.add('hidden');
+
+      document.getElementById('prac3-options').innerHTML = item.options.map(opt => `
+        <button onclick="checkPrac3('${opt}')"
+          class="p-4 rounded-2xl border-2 border-emerald-200 bg-emerald-50/50 hover:bg-amber-100 hover:border-amber-500 arabic-text text-2xl font-bold text-emerald-950 transition">
+          ${opt}
+        </button>
+      `).join('');
+    }
+
+    function checkPrac3(chosen) {
+      const item = FILL_BLANK_ITEMS[prac3Idx];
+      const fb = document.getElementById('prac3-feedback');
+      fb.classList.remove('hidden');
+
+      if (chosen === item.correct) {
+        playSoundEffect(true);
+        fb.className = 'p-4 rounded-2xl text-sm font-bold bg-emerald-100 text-emerald-900 border border-emerald-400';
+        fb.textContent = 'Bagus sekali! Kalimat menjadi sempurna.';
+        setTimeout(() => {
+          prac3Idx = (prac3Idx + 1) % FILL_BLANK_ITEMS.length;
+          renderPrac3();
+        }, 1200);
+      } else {
+        playSoundEffect(false);
+        fb.className = 'p-4 rounded-2xl text-sm font-bold bg-rose-100 text-rose-900 border border-rose-300';
+        fb.textContent = 'Belum sesuai dengan konteks kalimat. Perhatikan petunjuk artinya!';
+      }
+    }
+
+    // Latihan 4: Menyusun Kalimat
+    let prac4Idx = 0;
+    let prac4Bank = [];
+    let prac4Selected = [];
+
+    function initPrac4() {
+      const item = SENTENCE_BUILD_ITEMS[prac4Idx];
+      document.getElementById('prac4-counter').textContent = `Kalimat ${prac4Idx + 1} / ${SENTENCE_BUILD_ITEMS.length}`;
+      document.getElementById('prac4-target-id').textContent = `"${item.targetId}"`;
+      prac4Selected = [];
+      prac4Bank = item.words.map((w, i) => ({ id: i, word: w, used: false })).sort(() => Math.random() - 0.5);
+      document.getElementById('prac4-feedback').classList.add('hidden');
+      document.getElementById('prac4-next-btn').classList.add('hidden');
+      renderPrac4();
+    }
+
+    function renderPrac4() {
+      const zone = document.getElementById('prac4-answer-zone');
+      if (prac4Selected.length === 0) {
+        zone.innerHTML = '<span class="text-xs text-slate-400 font-sans" dir="ltr">Klik kata-kata di bawah untuk menyusun kalimat...</span>';
+      } else {
+        zone.innerHTML = prac4Selected.map((wObj, idx) => `
+          <button onclick="removeWordFromSentence(${idx})"
+            class="px-4 py-2 rounded-xl bg-emerald-800 text-white arabic-text text-2xl font-bold shadow-xs hover:bg-rose-700 transition">
+            ${wObj.word}
+          </button>
+        `).join('');
+      }
+
+      document.getElementById('prac4-word-bank').innerHTML = prac4Bank.map((wObj, idx) => `
+        <button onclick="addWordToSentence(${idx})" ${wObj.used ? 'disabled' : ''}
+          class="px-4 py-2 rounded-xl border-2 arabic-text text-2xl font-bold transition ${
+            wObj.used 
+              ? 'bg-slate-100 border-slate-200 text-slate-300 cursor-not-allowed' 
+              : 'bg-amber-100 hover:bg-amber-300 border-amber-400 text-emerald-950 shadow-xs'
+          }">
+          ${wObj.word}
+        </button>
+      `).join('');
+    }
+
+    function addWordToSentence(bankIdx) {
+      if (prac4Bank[bankIdx].used) return;
+      prac4Bank[bankIdx].used = true;
+      prac4Selected.push(prac4Bank[bankIdx]);
+      renderPrac4();
+    }
+
+    function removeWordFromSentence(selIdx) {
+      const removed = prac4Selected.splice(selIdx, 1)[0];
+      const bItem = prac4Bank.find(b => b.id === removed.id);
+      if (bItem) bItem.used = false;
+      renderPrac4();
+    }
+
+    function resetSentenceBuilder() {
+      initPrac4();
+    }
+
+    function checkSentenceBuilder() {
+      const item = SENTENCE_BUILD_ITEMS[prac4Idx];
+      const userSentence = prac4Selected.map(s => s.word).join(' ');
+      const targetSentence = item.words.join(' ');
+      const fb = document.getElementById('prac4-feedback');
+      fb.classList.remove('hidden');
+
+      if (userSentence === targetSentence) {
+        playSoundEffect(true);
+        speakArabic(targetSentence);
+        fb.className = 'p-4 rounded-2xl text-sm font-bold bg-emerald-100 text-emerald-900 border border-emerald-400';
+        fb.textContent = 'Mumtaz! Susunan kalimat bahasa Arab sudah benar.';
+        document.getElementById('prac4-next-btn').classList.remove('hidden');
+      } else {
+        playSoundEffect(false);
+        fb.className = 'p-4 rounded-2xl text-sm font-bold bg-rose-100 text-rose-900 border border-rose-300';
+        fb.textContent = 'Urutan kata belum tepat. Klik kata di kotak atas untuk mengembalikannya, lalu susun ulang.';
+      }
+    }
+
+    function nextSentenceBuilder() {
+      prac4Idx = (prac4Idx + 1) % SENTENCE_BUILD_ITEMS.length;
+      initPrac4();
+    }
+
+    // -----------------------------------------------------------------------
+    // 9. LOGIKA HALAMAN KUIS (20 SOAL + IDENTITAS + SERTIFIKAT)
+    // -----------------------------------------------------------------------
+    let examCurrentIdx = 0;
+    let examScore = 0;
+    let examCorrectCount = 0;
+    let examAnswered = false;
+
+    function startOfficialQuiz(e) {
+      e.preventDefault();
+      const name = document.getElementById('student-name').value.trim();
+      const className = document.getElementById('student-class').value.trim();
+      const absen = document.getElementById('student-absen').value.trim();
+
+      if (!name || !className || !absen) return;
+
+      appState.student = { name, className, absen };
+      saveAppState();
+
+      examCurrentIdx = 0;
+      examScore = 0;
+      examCorrectCount = 0;
+      examAnswered = false;
+
+      document.getElementById('quiz-identity-card').classList.add('hidden');
+      document.getElementById('quiz-result-container').classList.add('hidden');
+      document.getElementById('quiz-exam-card').classList.remove('hidden');
+      document.getElementById('exam-student-tag').textContent = `${name} (${className})`;
+
+      renderExamQuestion();
+    }
+
+    function renderExamQuestion() {
+      examAnswered = false;
+      const q = QUIZ_QUESTIONS[examCurrentIdx];
+      const total = QUIZ_QUESTIONS.length;
+      const pct = Math.round(((examCurrentIdx + 1) / total) * 100);
+
+      document.getElementById('exam-q-number').textContent = `Soal ${examCurrentIdx + 1} dari ${total}`;
+      document.getElementById('exam-live-score').textContent = `Skor: ${examScore}`;
+      document.getElementById('exam-progress-bar').style.width = `${pct}%`;
+
+      document.getElementById('exam-q-id').textContent = q.qId;
+      document.getElementById('exam-q-ar').textContent = q.qAr;
+
+      document.getElementById('exam-feedback-box').classList.add('hidden');
+      document.getElementById('exam-next-btn').classList.add('hidden');
+
+      const letters = ['أ', 'ب', 'ج', 'د'];
+      document.getElementById('exam-options').innerHTML = q.options.map((opt, idx) => `
+        <button onclick="submitExamAnswer(${idx})" id="exam-opt-${idx}"
+          class="w-full p-4 rounded-2xl border-2 border-emerald-200 bg-white hover:bg-amber-50 hover:border-amber-400 transition flex items-center justify-between gap-3 text-left">
+          <span class="text-sm sm:text-base font-bold text-slate-800">${opt}</span>
+          <span class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-950 font-arabic font-bold text-lg flex items-center justify-center flex-shrink-0">
+            ${letters[idx]}
+          </span>
+        </button>
+      `).join('');
+    }
+
+    function speakCurrentExamQuestion() {
+      const q = QUIZ_QUESTIONS[examCurrentIdx];
+      if (q) speakArabic(q.qAr, `Soal ${examCurrentIdx + 1}`);
+    }
+
+    function submitExamAnswer(chosenIdx) {
+      if (examAnswered) return;
+      examAnswered = true;
+
+      const q = QUIZ_QUESTIONS[examCurrentIdx];
+      const isRight = chosenIdx === q.correct;
+      const fb = document.getElementById('exam-feedback-box');
+      fb.classList.remove('hidden');
+
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`exam-opt-${idx}`);
+        btn.disabled = true;
+        if (idx === q.correct) {
+          btn.className = 'w-full p-4 rounded-2xl border-2 border-emerald-600 bg-emerald-100 flex items-center justify-between gap-3 text-left';
+        } else if (idx === chosenIdx && !isRight) {
+          btn.className = 'w-full p-4 rounded-2xl border-2 border-rose-500 bg-rose-100 flex items-center justify-between gap-3 text-left';
+        } else {
+          btn.className = 'w-full p-4 rounded-2xl border-2 border-slate-200 bg-slate-50 opacity-60 flex items-center justify-between gap-3 text-left';
+        }
+      });
+
+      if (isRight) {
+        examScore += 5;
+        examCorrectCount++;
+        playSoundEffect(true);
+        document.getElementById('exam-live-score').textContent = `Skor: ${examScore}`;
+        fb.className = 'p-4 rounded-2xl border-2 border-emerald-500 bg-emerald-50 text-emerald-900 text-sm font-bold';
+        fb.innerHTML = '<i class="fa-solid fa-circle-check mr-1.5 text-emerald-600"></i> Jawaban Benar! (+5 Poin)';
+      } else {
+        playSoundEffect(false);
+        fb.className = 'p-4 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-900 text-sm font-bold';
+        fb.innerHTML = `<i class="fa-solid fa-circle-xmark mr-1.5 text-rose-600"></i> Jawaban Salah (0 Poin). Jawaban yang tepat adalah: <strong>${q.options[q.correct]}</strong>`;
+      }
+
+      const nextBtn = document.getElementById('exam-next-btn');
+      nextBtn.classList.remove('hidden');
+      document.getElementById('exam-next-label').textContent =
+        examCurrentIdx < QUIZ_QUESTIONS.length - 1 ? 'Soal Selanjutnya' : 'Lihat Hasil & Sertifikat';
+    }
+
+    function nextExamQuestion() {
+      if (examCurrentIdx < QUIZ_QUESTIONS.length - 1) {
+        examCurrentIdx++;
+        renderExamQuestion();
+      } else {
+        finishOfficialQuiz();
+      }
+    }
+
+    function getPredicate(score) {
+      if (score >= 90) return { ar: 'مُمْتَازٌ', id: 'Istimewa' };
+      if (score >= 80) return { ar: 'جَيِّدٌ جِدًّا', id: 'Sangat Baik' };
+      if (score >= 70) return { ar: 'جَيِّدٌ', id: 'Baik' };
+      if (score >= 60) return { ar: 'مَقْبُولٌ', id: 'Cukup' };
+      return { ar: 'يَحْتَاجُ إِلَى التَّدْرِيبِ', id: 'Perlu Latihan' };
+    }
+
+    function finishOfficialQuiz() {
+      document.getElementById('quiz-exam-card').classList.add('hidden');
+      document.getElementById('quiz-result-container').classList.remove('hidden');
+
+      const wrongCount = QUIZ_QUESTIONS.length - examCorrectCount;
+      const pred = getPredicate(examScore);
+
+      if (appState.bestScore === null || examScore > appState.bestScore) {
+        appState.bestScore = examScore;
+      }
+      appState.certificateEarned = true;
+      saveAppState();
+
+      document.getElementById('res-student-name').textContent = appState.student.name;
+      document.getElementById('res-student-meta').textContent =
+        `Kelas: ${appState.student.className} | Nomor Absen: ${appState.student.absen}`;
+      document.getElementById('res-correct').textContent = examCorrectCount;
+      document.getElementById('res-wrong').textContent = wrongCount;
+      document.getElementById('res-score').textContent = examScore;
+      document.getElementById('res-predicate-ar').textContent = pred.ar;
+      document.getElementById('res-predicate-id').textContent = pred.id;
+
+      // Isi Sertifikat Digital
+      document.getElementById('cert-student-name').textContent = appState.student.name;
+      document.getElementById('cert-student-class').textContent =
+        `Kelas: ${appState.student.className} • Nomor Absen: ${appState.student.absen}`;
+      document.getElementById('cert-score').textContent = `${examScore} / 100`;
+      document.getElementById('cert-predicate').textContent = `${pred.ar} (${pred.id})`;
+      document.getElementById('cert-date').textContent = new Date().toLocaleDateString('id-ID', {
+        day: 'numeric', month: 'long', year: 'numeric'
+      });
+
+      playSoundEffect(true);
+    }
+
+    function retakeQuiz() {
+      document.getElementById('quiz-result-container').classList.add('hidden');
+      document.getElementById('quiz-identity-card').classList.remove('hidden');
+    }
+
+    // -----------------------------------------------------------------------
+    // 10. INITIALIZATION ON DOM LOAD
+    // -----------------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+      }
+      loadAppState();
+      renderVocabGrid();
+      renderFlashcard();
+      initMatchingGame();
+      initPrac2();
+      renderPrac3();
+      initPrac4();
+    });
+  </script>
+</body>
+</html>
